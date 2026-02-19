@@ -84,10 +84,33 @@
                 <div class="flex items-center gap-4"><a
                         class="bg-primary hover:bg-primary/90 text-background-dark text-[10px] font-black px-6 py-2 rounded uppercase tracking-widest transition-all"
                         href="#">DEPLOY NOW</a>
-                    <div
-                        class="size-8 rounded-full border border-border-dark overflow-hidden bg-surface-dark flex items-center justify-center">
-                        <img alt="User Profile" class="w-full h-full object-cover"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAClhckHo5K6owHrg2i8ClxYO6kUQ7-TNJUWzXABj8dbKVju9NlGJ5Ce1qcHEsWlOWELQ-ChgI628spjgJH0VfzHtHdtWrwjJbBtHvtR9VqiU0hWhTTxKI3vQ2ZjdfTkNvITAZY7aag_ai4E5TntEeQdsY4ELa7rcm04NFwGNXuLv3F7yfQilArqrL-neUIG7Zm6ZVJ92rdHWQfmw54pdHAPXCfSKJqrOXAnIZE9_IF1FDRVK4nyN7v11VjBx7cxd1LJFBCuMcJ0ho" />
+                    <div class="relative group">
+                        <button id="admin-trigger"
+                            class="size-8 rounded-full border border-border-dark overflow-hidden bg-surface-dark flex items-center justify-center hover:border-primary transition-all">
+                            <img alt="User Profile" class="w-full h-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAClhckHo5K6owHrg2i8ClxYO6kUQ7-TNJUWzXABj8dbKVju9NlGJ5Ce1qcHEsWlOWELQ-ChgI628spjgJH0VfzHtHdtWrwjJbBtHvtR9VqiU0hWhTTxKI3vQ2ZjdfTkNvITAZY7aag_ai4E5TntEeQdsY4ELa7rcm04NFwGNXuLv3F7yfQilArqrL-neUIG7Zm6ZVJ92rdHWQfmw54pdHAPXCfSKJqrOXAnIZE9_IF1FDRVK4nyN7v11VjBx7cxd1LJFBCuMcJ0ho" />
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div id="admin-dropdown"
+                            class="absolute right-0 mt-2 w-48 bg-background-dark/95 border border-primary/20 rounded-lg shadow-2xl backdrop-blur-md hidden z-50 overflow-hidden text-left">
+                            <div class="px-4 py-3 border-b border-primary/10">
+                                <p class="text-[10px] font-bold text-primary uppercase tracking-widest">Operator Session
+                                </p>
+                                <p class="text-xs font-bold text-slate-300">Unit_Admin</p>
+                            </div>
+                            <div class="py-2">
+                                <a href="admin-login.html"
+                                    class="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 text-slate-400 hover:text-primary transition-all">
+                                    <span class="material-symbols-outlined text-sm">terminal</span>
+                                    <span class="text-[10px] font-bold uppercase tracking-widest">Command Access</span>
+                                </a>
+                                <a href="admin-dashboard.html"
+                                    class="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 text-slate-400 hover:text-primary transition-all">
+                                    <span class="material-symbols-outlined text-sm">dashboard</span>
+                                    <span class="text-[10px] font-bold uppercase tracking-widest">Dashboard</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

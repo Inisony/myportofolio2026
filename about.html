@@ -58,27 +58,60 @@
         <div class="fixed inset-0 scanline pointer-events-none"></div>
         <!-- Navigation -->
         <header
-            class="sticky top-0 z-50 border-b border-primary/20 bg-background-dark/80 backdrop-blur-md px-6 lg:px-20 py-4 flex items-center justify-between">
+            class="sticky top-0 z-50 border-b border-white/10 bg-background-dark/95 backdrop-blur-sm px-6 lg:px-12 py-3 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="size-8 bg-primary flex items-center justify-center rounded">
-                    <span class="material-symbols-outlined text-background-dark font-bold text-xl">military_tech</span>
+                <div class="relative group">
+                    <button id="admin-trigger"
+                        class="size-8 border-2 border-primary rounded-full flex items-center justify-center p-1.5 hover:scale-105 transition-transform">
+                        <svg class="w-full h-full text-white" fill="currentColor" viewbox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-12.5c-2.48 0-4.5 2.02-4.5 4.5s2.02 4.5 4.5 4.5 4.5-2.02 4.5-4.5-2.02-4.5-4.5-4.5z">
+                            </path>
+                        </svg>
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div id="admin-dropdown"
+                        class="absolute left-0 mt-2 w-48 bg-background-dark/95 border border-primary/20 rounded-lg shadow-2xl backdrop-blur-md hidden z-50 overflow-hidden text-left font-sans">
+                        <div class="px-4 py-3 border-b border-primary/10">
+                            <p class="text-[10px] font-bold text-primary uppercase tracking-widest">Operator Session</p>
+                            <p class="text-xs font-bold text-slate-300">Unit_Admin</p>
+                        </div>
+                        <div class="py-2">
+                            <a href="admin-login.html"
+                                class="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 text-slate-400 hover:text-primary transition-all">
+                                <span class="material-symbols-outlined text-sm">terminal</span>
+                                <span class="text-[10px] font-bold uppercase tracking-widest">Command Access</span>
+                            </a>
+                            <a href="admin-dashboard.html"
+                                class="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 text-slate-400 hover:text-primary transition-all">
+                                <span class="material-symbols-outlined text-sm">dashboard</span>
+                                <span class="text-[10px] font-bold uppercase tracking-widest">Dashboard</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="flex flex-col">
-                    <h1 class="text-sm font-black tracking-tighter uppercase leading-none text-primary">KORPS MARINIR
-                    </h1>
-                    <span class="text-[10px] tracking-widest uppercase opacity-60">Multimedia Unit</span>
+                    <h1 class="text-sm font-black tracking-tight uppercase leading-none text-white">TM OPERATOR</h1>
                 </div>
             </div>
-            <nav class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-widest">
-                <a class="hover:text-primary transition-colors" href="index.html">Mission</a>
-                <a class="text-primary underline underline-offset-8 decoration-2" href="about.html">Specialist</a>
-                <a class="hover:text-primary transition-colors" href="gallery.html">Gallery</a>
-                <a class="hover:text-primary transition-colors" href="video.html">Video</a>
-                <a class="hover:text-primary transition-colors" href="contact.html">Tactical Gear</a>
+            <nav class="hidden md:flex items-center gap-10 text-[10px] font-black uppercase tracking-[0.2em]">
+                <a class="hover:text-primary transition-colors" href="#">HOME</a>
+                <a class="hover:text-primary transition-colors" href="#">PORTFOLIO</a>
+                <a class="text-primary" href="#">SERVICES</a>
+                <a class="hover:text-primary transition-colors" href="#">CONTACT</a>
             </nav>
-            <button class="bg-primary/10 border border-primary/30 p-2 rounded hover:bg-primary/20 transition-all">
-                <span class="material-symbols-outlined text-primary">menu</span>
-            </button>
+
+            <div class="flex items-center gap-4">
+                <button
+                    class="bg-primary text-background-dark px-5 py-2 rounded-sm font-black uppercase text-[10px] tracking-widest hover:brightness-110 transition-all">
+                    DEPLOY NOW
+                </button>
+                <div class="size-8 rounded-full overflow-hidden border border-white/20">
+                    <img alt="Profile" class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH61-2-E859_mR1vA_Yg-wTof0YqN2V3F2y35H9vL0vL1W5q9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X" />
+                </div>
+            </div>
+
         </header>
         <main class="relative z-10 flex-1 w-full max-w-6xl mx-auto px-6 py-12 lg:py-24">
             <!-- Hero Section -->
@@ -384,6 +417,22 @@
             </div>
         </footer>
     </div>
+    <script>
+        // Admin Dropdown Toggle Logic
+        const trigger = document.getElementById('admin-trigger');
+        const dropdown = document.getElementById('admin-dropdown');
+
+        if (trigger && dropdown) {
+            trigger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                dropdown.classList.toggle('hidden');
+            });
+
+            document.addEventListener('click', () => {
+                dropdown.classList.add('hidden');
+            });
+        }
+    </script>
 </body>
 
 </html>
