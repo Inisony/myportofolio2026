@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About | Indonesian Marine Multimedia Specialist</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#73d411",
+                        "background-light": "#f7f8f6",
+                        "background-dark": "#192210",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .tactical-grid {
+            background-image: linear-gradient(to right, rgba(115, 212, 17, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(115, 212, 17, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .scanline {
+            background: linear-gradient(to bottom, transparent 50%, rgba(115, 212, 17, 0.02) 50%);
+            background-size: 100% 4px;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-background-dark">
+    <div class="relative min-h-screen flex flex-col overflow-x-hidden">
+        <!-- Background Elements -->
+        <div class="fixed inset-0 tactical-grid pointer-events-none opacity-50"></div>
+        <div class="fixed inset-0 scanline pointer-events-none"></div>
+        <!-- Navigation -->
+        <header
+            class="sticky top-0 z-50 border-b border-primary/20 bg-background-dark/80 backdrop-blur-md px-6 lg:px-20 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="size-8 bg-primary flex items-center justify-center rounded">
+                    <span class="material-symbols-outlined text-background-dark font-bold text-xl">military_tech</span>
+                </div>
+                <div class="flex flex-col">
+                    <h1 class="text-sm font-black tracking-tighter uppercase leading-none text-primary">KORPS MARINIR
+                    </h1>
+                    <span class="text-[10px] tracking-widest uppercase opacity-60">Multimedia Unit</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-widest">
+                <a class="hover:text-primary transition-colors" href="index.html">Mission</a>
+                <a class="text-primary underline underline-offset-8 decoration-2" href="about.html">Specialist</a>
+                <a class="hover:text-primary transition-colors" href="gallery.html">Gallery</a>
+                <a class="hover:text-primary transition-colors" href="video.html">Video</a>
+                <a class="hover:text-primary transition-colors" href="index.html#contact">Tactical Gear</a>
+            </nav>
+            <button class="bg-primary/10 border border-primary/30 p-2 rounded hover:bg-primary/20 transition-all">
+                <span class="material-symbols-outlined text-primary">menu</span>
+            </button>
+        </header>
+        <main class="relative z-10 flex-1 w-full max-w-6xl mx-auto px-6 py-12 lg:py-24">
+            <!-- Hero Section -->
+            <section class="grid lg:grid-cols-2 gap-12 items-center mb-32">
+                <div class="space-y-6">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold tracking-widest uppercase">
+                        <span class="size-1.5 rounded-full bg-primary animate-pulse"></span>
+                        Operational Status: Active
+                    </div>
+                    <h2 class="text-5xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.9] text-slate-100">
+                        Visual <br /><span class="text-primary">Frontline</span> Specialist
+                    </h2>
+                    <p class="text-lg text-slate-400 max-w-md leading-relaxed">
+                        Serving the Indonesian Marine Corps through the precision of visual storytelling. Blending
+                        military tactical discipline with elite multimedia production.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <button
+                            class="bg-primary text-background-dark px-8 py-3 rounded font-black uppercase text-sm tracking-widest hover:brightness-110 transition-all flex items-center gap-2">
+                            Deployment History
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </button>
+                        <button
+                            class="border border-slate-700 px-8 py-3 rounded font-black uppercase text-sm tracking-widest hover:bg-slate-800 transition-all">
+                            CV.PDF
+                        </button>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-4 border border-primary/20 rounded group-hover:border-primary/40 transition-colors">
+                    </div>
+                    <div class="absolute top-0 right-0 p-4 flex flex-col items-end gap-1 opacity-40">
+                        <span class="text-[10px] font-mono">LAT: -6.1751° S</span>
+                        <span class="text-[10px] font-mono">LON: 106.8272° E</span>
+                    </div>
+                    <div class="aspect-[4/5] bg-slate-800 rounded-lg overflow-hidden relative border border-primary/10">
+                        <img class="w-full h-full object-cover grayscale brightness-75 contrast-125"
+                            data-alt="A tactical portrait of a military specialist in silhouette"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuI79UmFrFxEgMVPlBZhENS8_abfOzCLkTYKwuqmLeV7hRRRylRBsGCqoA9xo33fJhpCDpKoH7UcOMPMyvOPH0WM2dHMgNWlQIteO0ZMs23JhdH_RKAHxq_6Q9Ho6b3KvQ1oDCaAl5n7KcI5_BLYeMEPc8QJPcQUhH5CZyH6sPpKEfENktT4692sV6ulzr7cXdg5LfnPP5GWRJau9OVrSTvqzkc5T3Dbi-2r18MYUrgyl070tsvC81ynOeZRE2_1h58khJ8-KrxCE" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent">
+                        </div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <div class="flex justify-between items-end border-l-2 border-primary pl-4">
+                                <div>
+                                    <p class="text-[10px] uppercase tracking-widest text-primary font-bold">Subject ID
+                                    </p>
+                                    <h3 class="text-xl font-black uppercase tracking-tight">Multimedia Op. 01</h3>
+                                </div>
+                                <span class="material-symbols-outlined text-primary">target</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Mission Statement -->
+            <section class="mb-32 text-center max-w-3xl mx-auto">
+                <span class="material-symbols-outlined text-primary text-4xl mb-6">format_quote</span>
+                <blockquote class="text-2xl lg:text-4xl font-light italic text-slate-200 leading-snug">
+                    "Melayani bangsa melalui lensa. Menggabungkan disiplin militer dengan seni visual untuk menyampaikan
+                    narasi komando yang tak terbantahkan di garis depan digital."
+                </blockquote>
+                <div class="mt-8 h-px w-24 bg-primary mx-auto"></div>
+                <p class="mt-4 text-xs font-bold uppercase tracking-widest text-primary">Personal Statement of Duty</p>
+            </section>
+            <!-- Core Values -->
+            <section class="mb-32 grid md:grid-cols-3 gap-6">
+                <div
+                    class="p-8 border border-primary/10 bg-primary/5 rounded-xl hover:border-primary/40 transition-colors group">
+                    <span
+                        class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform block">verified_user</span>
+                    <h4 class="text-xl font-black uppercase tracking-tight mb-2">Discipline</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">Operasional tanpa cela. Setiap frame direncanakan
+                        dengan presisi militer dan ketepatan waktu yang mutlak.</p>
+                </div>
+                <div
+                    class="p-8 border border-primary/10 bg-primary/5 rounded-xl hover:border-primary/40 transition-colors group">
+                    <span
+                        class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform block">psychology</span>
+                    <h4 class="text-xl font-black uppercase tracking-tight mb-2">Creativity</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">Berpikir di luar taktik standar. Menemukan sudut
+                        pandang unik untuk menginspirasi kebanggaan nasional.</p>
+                </div>
+                <div
+                    class="p-8 border border-primary/10 bg-primary/5 rounded-xl hover:border-primary/40 transition-colors group">
+                    <span
+                        class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform block">biotech</span>
+                    <h4 class="text-xl font-black uppercase tracking-tight mb-2">Precision</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">Akurasi teknis tinggi. Dari color grading hingga
+                        koordinat drone, tidak ada ruang untuk kesalahan visual.</p>
+                </div>
+            </section>
+            <!-- Specialisms Bento Grid -->
+            <section class="mb-32">
+                <div class="flex justify-between items-end mb-12">
+                    <div>
+                        <h2 class="text-3xl font-black uppercase tracking-tighter">Tactical Capabilities</h2>
+                        <div class="h-1 w-12 bg-primary mt-2"></div>
+                    </div>
+                    <span class="text-[10px] font-mono opacity-40">SYSTEMS_CHECK: OPTIMAL</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div
+                        class="md:col-span-2 row-span-2 relative group rounded-lg overflow-hidden border border-primary/10 bg-slate-900 aspect-video md:aspect-auto">
+                        <img class="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700 grayscale"
+                            data-alt="Cinematic military photography showing gear and mission focus"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeB_yhGXpsYM8GqAsX7Y49BcIMoWf92FjBNoFF0vM_C515gUZL-B4fHNzaRaaI-HoMJK2Pv0TT0GhzkY_C8KGbh9_-EbOQxA1v4msPJlV-5zcwWTMzSjdZlb3rqKN5mbmpdXqhC1xlP9pjFoGaUiOC_DnkR7HZuJt1kHq5UciTuLVGLq5Em2v1dUK6Q50JqyGSatQxmlBfnJVMiuKpec3FWfkCjY1Xp4CqeNHpuQKf4oIRse5ZlCBxi-i4PWAHd-ePHYKyUY8M29E" />
+                        <div
+                            class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-background-dark to-transparent">
+                            <span class="text-[10px] font-bold text-primary tracking-widest uppercase mb-2">Primary
+                                Specialism</span>
+                            <h5 class="text-3xl font-black uppercase italic">Photography &amp; Cinematography</h5>
+                            <p class="text-sm text-slate-300 mt-2 max-w-sm">Dokumentasi operasional dengan standar
+                                sinematik tertinggi untuk kebutuhan komando dan publikasi.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-primary/5 border border-primary/10 p-6 rounded-lg group hover:bg-primary/10 transition-all">
+                        <span class="material-symbols-outlined text-primary mb-4">settings_input_antenna</span>
+                        <h5 class="font-black uppercase tracking-tight text-lg">Drone Pilot</h5>
+                        <p class="text-xs text-slate-400 mt-2">Sertifikasi pengintaian udara dan pengambilan gambar
+                            udara taktis di medan sulit.</p>
+                    </div>
+                    <div
+                        class="bg-primary/5 border border-primary/10 p-6 rounded-lg group hover:bg-primary/10 transition-all">
+                        <span class="material-symbols-outlined text-primary mb-4">movie_edit</span>
+                        <h5 class="font-black uppercase tracking-tight text-lg">Post-Production</h5>
+                        <p class="text-xs text-slate-400 mt-2">Editing cepat dengan presisi tinggi untuk rilis berita
+                            dan dokumentasi arsip militer.</p>
+                    </div>
+                    <div
+                        class="md:col-span-2 bg-primary/5 border border-primary/10 p-6 rounded-lg group hover:bg-primary/10 transition-all flex flex-col md:flex-row gap-6 items-center">
+                        <div class="flex-1">
+                            <span class="material-symbols-outlined text-primary mb-4">hub</span>
+                            <h5 class="font-black uppercase tracking-tight text-xl">Digital Communication</h5>
+                            <p class="text-sm text-slate-400 mt-2 leading-relaxed">Manajemen platform media sosial Korps
+                                Marinir untuk memperkuat citra positif TNI AL di mata dunia.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 shrink-0">
+                            <div
+                                class="size-16 bg-slate-800 rounded flex items-center justify-center border border-white/5">
+                                <span class="material-symbols-outlined opacity-40">public</span>
+                            </div>
+                            <div
+                                class="size-16 bg-slate-800 rounded flex items-center justify-center border border-white/5">
+                                <span class="material-symbols-outlined opacity-40">share</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Military Timeline -->
+            <section class="mb-32">
+                <h2 class="text-3xl font-black uppercase tracking-tighter mb-16 text-center">Service History</h2>
+                <div
+                    class="relative space-y-12 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-primary/30 before:to-transparent">
+                    <!-- Item 1 -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full border border-primary bg-background-dark text-primary shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <span class="material-symbols-outlined text-sm">circle</span>
+                        </div>
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[45%] p-6 rounded-xl border border-primary/10 bg-primary/5 hover:border-primary/40 transition-colors">
+                            <div class="flex items-center justify-between space-x-2 mb-1">
+                                <div class="font-black text-primary text-sm uppercase">2018 - 2019</div>
+                            </div>
+                            <div class="text-slate-100 font-bold uppercase tracking-tight">Pendidikan Dasar Militer
+                            </div>
+                            <div class="text-slate-400 text-sm mt-2 leading-relaxed">Pembentukan disiplin dan mentalitas
+                                prajurit Korps Marinir Indonesia di Kawah Candradimuka.</div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full border border-primary bg-background-dark text-primary shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <span class="material-symbols-outlined text-sm">videocam</span>
+                        </div>
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[45%] p-6 rounded-xl border border-primary/10 bg-primary/5 hover:border-primary/40 transition-colors">
+                            <div class="flex items-center justify-between space-x-2 mb-1">
+                                <div class="font-black text-primary text-sm uppercase">2020 - 2022</div>
+                            </div>
+                            <div class="text-slate-100 font-bold uppercase tracking-tight">Multimedia Command Center
+                            </div>
+                            <div class="text-slate-400 text-sm mt-2 leading-relaxed">Spesialisasi dokumentasi latihan
+                                gabungan dan produksi konten strategis Mabes AL.</div>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full border border-primary bg-background-dark text-primary shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <span class="material-symbols-outlined text-sm">flight</span>
+                        </div>
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[45%] p-6 rounded-xl border border-primary/10 bg-primary/5 hover:border-primary/40 transition-colors">
+                            <div class="flex items-center justify-between space-x-2 mb-1">
+                                <div class="font-black text-primary text-sm uppercase">2023 - Present</div>
+                            </div>
+                            <div class="text-slate-100 font-bold uppercase tracking-tight">Lead Visual Strategist</div>
+                            <div class="text-slate-400 text-sm mt-2 leading-relaxed">Bertanggung jawab atas narasi
+                                visual eksternal dan operasional drone pengintaian Korps Marinir.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Gear Manifest -->
+            <section class="mb-32">
+                <div class="border border-primary/20 bg-primary/5 rounded-xl overflow-hidden">
+                    <div class="bg-primary/10 px-6 py-3 border-b border-primary/20 flex justify-between items-center">
+                        <h3 class="font-black uppercase tracking-widest text-xs text-primary">Mission Manifest // Gear
+                            List</h3>
+                        <div class="flex gap-2">
+                            <span class="size-2 rounded-full bg-red-500/50"></span>
+                            <span class="size-2 rounded-full bg-yellow-500/50"></span>
+                            <span class="size-2 rounded-full bg-green-500/50"></span>
+                        </div>
+                    </div>
+                    <div class="p-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div>
+                            <p
+                                class="text-[10px] font-bold text-primary uppercase mb-4 tracking-widest border-b border-primary/10 pb-2">
+                                Optics &amp; Capture</p>
+                            <ul class="space-y-3 font-mono text-xs uppercase opacity-80">
+                                <li class="flex justify-between"><span>Sony Alpha System</span> <span
+                                        class="text-primary">[MIL-SPEC]</span></li>
+                                <li class="flex justify-between"><span>G-Master Prime Lenses</span>
+                                    <span>[85MM/35MM]</span>
+                                </li>
+                                <li class="flex justify-between"><span>RED Komodo 6K</span> <span>[OPS]</span></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p
+                                class="text-[10px] font-bold text-primary uppercase mb-4 tracking-widest border-b border-primary/10 pb-2">
+                                Aerial Assets</p>
+                            <ul class="space-y-3 font-mono text-xs uppercase opacity-80">
+                                <li class="flex justify-between"><span>DJI Mavic 3 Cine</span> <span
+                                        class="text-primary">[DEPLOYED]</span></li>
+                                <li class="flex justify-between"><span>Custom FPV 5"</span> <span>[HIGH-SPEED]</span>
+                                </li>
+                                <li class="flex justify-between"><span>DJI Avata</span> <span>[CQB]</span></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p
+                                class="text-[10px] font-bold text-primary uppercase mb-4 tracking-widest border-b border-primary/10 pb-2">
+                                Processing Unit</p>
+                            <ul class="space-y-3 font-mono text-xs uppercase opacity-80">
+                                <li class="flex justify-between"><span>Mac Studio M2 Ultra</span> <span>[BASE]</span>
+                                </li>
+                                <li class="flex justify-between"><span>MacBook Pro M3 Max</span> <span
+                                        class="text-primary">[FIELD]</span></li>
+                                <li class="flex justify-between"><span>DaVinci Resolve Studio</span> <span>[POST]</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="relative z-10 border-t border-primary/20 bg-background-dark py-12 px-6">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-4">
+                    <div class="size-12 border border-primary/50 flex items-center justify-center rounded-full">
+                        <span class="material-symbols-outlined text-primary">anchor</span>
+                    </div>
+                    <div>
+                        <h4 class="font-black uppercase tracking-tighter">Korps Marinir Indonesia</h4>
+                        <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Jalesu Bhumyamca
+                            Jayamahe</p>
+                    </div>
+                </div>
+                <div class="flex gap-6">
+                    <a class="size-10 rounded-full border border-slate-700 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all"
+                        href="#">
+                        <svg class="size-5" fill="currentColor" viewbox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.947.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.947-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.947 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="size-10 rounded-full border border-slate-700 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all"
+                        href="#">
+                        <svg class="size-5" fill="currentColor" viewbox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-12 text-center text-[10px] text-slate-600 font-mono uppercase tracking-widest">
+                © 2024 MARINIR MULTIMEDIA OPS. ALL RIGHTS RESERVED.
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Marine Multimedia | Tactical Video Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#73d411",
+                        "background-light": "#f7f8f6",
+                        "background-dark": "#0a0a0a",
+                        "slate-custom": "#1a1c18",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .scanline-overlay {
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+
+        .hud-corner {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-color: #73d411;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display selection:bg-primary/30">
+    <!-- Subtle HUD Texture Overlay -->
+    <div class="fixed inset-0 scanline-overlay opacity-20 pointer-events-none z-50"></div>
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+        <!-- Navigation Bar -->
+        <header class="sticky top-0 z-40 w-full border-b border-white/5 bg-background-dark/80 backdrop-blur-md">
+            <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="flex h-10 w-10 items-center justify-center rounded bg-primary/10 text-primary border border-primary/20">
+                        <span class="material-symbols-outlined text-2xl">grid_view</span>
+                    </div>
+                    <div>
+                        <h1 class="text-lg font-black tracking-tighter uppercase leading-none">Marine</h1>
+                        <p class="text-[10px] font-medium text-primary tracking-[0.2em] uppercase">Multimedia Ops</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-bold uppercase tracking-widest text-slate-400 hover:text-white transition-colors"
+                        href="index.html">Home</a>
+                    <a class="text-sm font-bold uppercase tracking-widest text-slate-400 hover:text-white transition-colors"
+                        href="about.html">About</a>
+                    <a class="text-sm font-bold uppercase tracking-widest text-slate-400 hover:text-white transition-colors"
+                        href="gallery.html">Gallery</a>
+                    <a class="text-sm font-bold uppercase tracking-widest text-primary" href="video.html">Video</a>
+                    <a class="text-sm font-bold uppercase tracking-widest text-slate-400 hover:text-white transition-colors"
+                        href="index.html#contact">Contact</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="hidden lg:flex items-center gap-2 rounded border border-white/10 bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-widest text-white hover:bg-white/10 transition-all">
+                        <span class="material-symbols-outlined text-sm">search</span>
+                        Search
+                    </button>
+                    <button
+                        class="flex items-center gap-2 rounded bg-primary px-5 py-2.5 text-xs font-black uppercase tracking-widest text-background-dark hover:brightness-110 transition-all">
+                        Hire Me
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 px-6 py-12 lg:px-12">
+            <div class="mx-auto max-w-7xl">
+                <!-- Hero Section -->
+                <div class="mb-12 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+                    <div class="max-w-2xl">
+                        <div class="mb-2 flex items-center gap-2 text-primary">
+                            <span class="h-[1px] w-8 bg-primary"></span>
+                            <span class="text-[10px] font-bold tracking-[0.3em] uppercase">Operational Archives</span>
+                        </div>
+                        <h2 class="text-5xl font-black uppercase tracking-tighter md:text-7xl">
+                            Field Logs / <span class="text-primary">Multimedia</span>
+                        </h2>
+                        <p class="mt-4 text-lg text-slate-400 font-medium leading-relaxed">
+                            High-impact tactical reconnaissance and cinematic operations. Visual data captured in
+                            extreme environments.
+                        </p>
+                    </div>
+                    <button
+                        class="group relative flex items-center gap-3 overflow-hidden rounded border border-primary/50 bg-primary/5 px-8 py-4 text-sm font-black uppercase tracking-widest text-primary transition-all hover:bg-primary hover:text-background-dark">
+                        Request Footage
+                        <span
+                            class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </button>
+                </div>
+                <!-- Category Filters -->
+                <div class="mb-10 flex flex-wrap items-center gap-3 border-b border-white/5 pb-6">
+                    <button
+                        class="flex items-center gap-2 rounded bg-primary px-6 py-2.5 text-[11px] font-black uppercase tracking-[0.15em] text-background-dark">
+                        All Records
+                    </button>
+                    <button
+                        class="flex items-center gap-2 rounded border border-white/10 bg-white/5 px-6 py-2.5 text-[11px] font-bold uppercase tracking-[0.15em] text-slate-400 hover:border-primary/50 hover:text-primary transition-all">
+                        Drone Ops
+                    </button>
+                    <button
+                        class="flex items-center gap-2 rounded border border-white/10 bg-white/5 px-6 py-2.5 text-[11px] font-bold uppercase tracking-[0.15em] text-slate-400 hover:border-primary/50 hover:text-primary transition-all">
+                        Cinematic
+                    </button>
+                    <button
+                        class="flex items-center gap-2 rounded border border-white/10 bg-white/5 px-6 py-2.5 text-[11px] font-bold uppercase tracking-[0.15em] text-slate-400 hover:border-primary/50 hover:text-primary transition-all">
+                        Tactical
+                    </button>
+                </div>
+                <!-- Video Gallery Grid -->
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <!-- Card 1 -->
+                    <div class="group relative flex flex-col gap-4">
+                        <div
+                            class="relative aspect-video overflow-hidden rounded-lg bg-slate-custom border border-white/5">
+                            <div
+                                class="absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60">
+                            </div>
+                            <img class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                data-alt="High altitude drone shot of mountain peaks"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWwzTaOu_gqVXuuajlv3mpK2L2yIbOds2xjYdeaMV7AFfSiyRk-csBItwzAKCATzWjJFmpCL6DAN2PSA6p3FxENVP7POVGIxueTMzTnHl1QZ2mthoITLiMGGwVytBqLpjJqjmLymS0_ScIJUrYhgyTCig5hUUBXbiY1SRftA-5n1FpIsBIT_9KfCNMq7jfN-cKqC7PyehBkAWtR3kKk-TJ_gBwXF16xNQxpvDIOdesrMlHqlDQiu-bjk6bUmQrL-N7b60inPlDU8g" />
+                            <!-- Tactical Overlays -->
+                            <div class="hud-corner top-2 left-2 border-t border-l"></div>
+                            <div class="hud-corner top-2 right-2 border-t border-r"></div>
+                            <div class="hud-corner bottom-2 left-2 border-b border-l"></div>
+                            <div class="hud-corner bottom-2 right-2 border-b border-r"></div>
+                            <div
+                                class="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div
+                                    class="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-background-dark shadow-[0_0_30px_rgba(115,212,17,0.5)]">
+                                    <span class="material-symbols-outlined text-4xl fill-1">play_arrow</span>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-3 left-3 z-20 flex items-center gap-2">
+                                <span
+                                    class="rounded bg-black/60 px-2 py-1 text-[10px] font-bold text-primary backdrop-blur-sm border border-primary/20">4K
+                                    REC</span>
+                                <span
+                                    class="rounded bg-black/60 px-2 py-1 text-[10px] font-bold text-white backdrop-blur-sm">03:42</span>
+                            </div>
+                        </div>
+                        <div class="px-1">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="text-[10px] font-bold tracking-widest text-primary uppercase">OP-01: Drone
+                                    Ops</span>
+                                <span class="text-[10px] font-medium text-slate-500 uppercase">File_2024_082</span>
+                            </div>
+                            <h3
+                                class="text-xl font-black uppercase tracking-tight text-white group-hover:text-primary transition-colors">
+                                Arctic Reconnaissance</h3>
+                            <p class="mt-2 text-sm text-slate-400 line-clamp-2">Thermal mapping and visual scouting of
+                                the northern perimeter regions.</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="group relative flex flex-col gap-4">
+                        <div
+                            class="relative aspect-video overflow-hidden rounded-lg bg-slate-custom border border-white/5">
+                            <div
+                                class="absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60">
+                            </div>
+                            <img class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                data-alt="Tactical soldier in low light environment"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBym0nqeU3gCn0ikcDRnQNgoS0pj2x6sPcyvDkA4heWmhXLym5wo3DnOvsNmf1nzNT_BHX_QLry79HzYIFlkI6y3sKi6O_WA0ij5njPKnfpzh7HjRb9Gah3lQvCPcj9hH-olw8IyZuL4NSeTPGnzgDauvD6F2e0cimCNYfYOTOVEbIYVsIgtDCf4ZczpwRsMqBpU5lkKOUKPNI0HyP-aT3I74t26T1KikRzi9dtQ0r8bF4GmkOWpVciM71kswX6F49zclRs3lMiGR0" />
+                            <div
+                                class="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div
+                                    class="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-background-dark shadow-[0_0_30px_rgba(115,212,17,0.5)]">
+                                    <span class="material-symbols-outlined text-4xl fill-1">play_arrow</span>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-3 left-3 z-20 flex items-center gap-2">
+                                <span
+                                    class="rounded bg-black/60 px-2 py-1 text-[10px] font-bold text-red-500 backdrop-blur-sm border border-red-500/20">CLASSIFIED</span>
+                                <span
+                                    class="rounded bg-black/60 px-2 py-1 text-[10px] font-bold text-white backdrop-blur-sm">05:18</span>
+                            </div>
+                        </div>
+                        <div class="px-1">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="text-[10px] font-bold tracking-widest text-primary uppercase">OP-02:
+                                    Tactical</span>
+                                <span class="text-[10px] font-medium text-slate-500 uppercase">File_2024_011</span>
+                            </div>
+                            <h3
+                                class="text-xl font-black uppercase tracking-tight text-white group-hover:text-primary transition-colors">
+                                Urban Insertion</h3>
+                            <p class="mt-2 text-sm text-slate-400 line-clamp-2">Night vision footage from the
+                                ground-level sweep of sector 7-G.</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="group relative flex flex-col gap-4">
+                        <div
+                            class="relative aspect-video overflow-hidden rounded-lg bg-slate-custom border border-white/5">
+                            <div
+                                class="absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60">
+                            </div>
+                            <img class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                data-alt="Cinematic sunset over dark ocean waves"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvcGf-4wtGBE2yqpDq4lEdehBQR1MICobnxD5ljgeGFpSL3657HAu4b0abRLtmF2N46C2tC13Pb4fsFd2s6VOhm5IuYO4n5qCBvNnCbgwv1ZtF4nelBM56lDflJl0wPXHRCR8sj1FFYUb6IZa8zzT7rnDZomq3j85gyGAniolKHFQfl9ER45kDTciWh8d2ScQkRtF6HFp1fyO_BEAd5WVkIMjgEbHVPZRHLZ4QQfMdxXIJnHFxRE9Xrl-HpwEbLe76JxKoyszbUi0" />
+                            <div
+                                class="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div
+                                    class="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-background-dark shadow-[0_0_30px_rgba(115,212,17,0.5)]">
+                                    <span class="material-symbols-outlined text-4xl fill-1">play_arrow</span>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-3 left-3 z-20 flex items-center gap-2">
+                                <span
+                                    class="rounded bg-black/60 px-2 py-1 text-[10px] font-bold text-primary backdrop-blur-sm border border-primary/20">LOG-C</span>
+                                <span
+                                    class="rounded bg-black/60 px-2 py-1 text-[10px] font-bold text-white backdrop-blur-sm">02:55</span>
+                            </div>
+                        </div>
+                        <div class="px-1">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="text-[10px] font-bold tracking-widest text-primary uppercase">OP-03:
+                                    Cinematic</span>
+                                <span class="text-[10px] font-medium text-slate-500 uppercase">File_2024_992</span>
+                            </div>
+                            <h3
+                                class="text-xl font-black uppercase tracking-tight text-white group-hover:text-primary transition-colors">
+                                Deep Blue Horizon</h3>
+                            <p class="mt-2 text-sm text-slate-400 line-clamp-2">Stylized high-frame-rate capture of
+                                maritime operations at golden hour.</p>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="group relative flex flex-col gap-4">
+                        <div
+                            class="relative aspect-video overflow-hidden rounded-lg bg-slate-custom border border-white/5">
+                            <div
+                                class="absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60">
+                            </div>
+                            <img class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                data-alt="Cargo plane interior during drop mission"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz16GEb5ASngcQ4J_EkA5OUjk4qhodM4nUSgu1Jj7DSBP12S-GYVJLqtZJlzXjYaOfJqwd9FVUtEcifUX2Qn6KhCb2uiZvxWVno83P0wBx8G6ejpahx6G2tZfeNC2LN6hpq3aRUm-W7YxuEY0G6UsxwLKLpzw-bwvnhD1MoeMf4ipNWieF9JWHOIoIKijcYHbj9WROHVR3PMzBVZBC7C-fE9JgE886KlG57BcofPaGnifjZn4U8ZfkBz1q7dunWYkWf8Xd43FnbBQ" />
+                            <div
+                                class="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div
+                                    class="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-background-dark shadow-[0_0_30px_rgba(115,212,17,0.5)]">
+                                    <span class="material-symbols-outlined text-4xl fill-1">play_arrow</span>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-3 left-3 z-20 flex items-center gap-2">
+                                <span
+                                    class="rounded bg-black/60 px-2 py-1 text-[10px] font-bold text-primary backdrop-blur-sm border border-primary/20">RAW</span>
+                                <span
+                                    class="rounded bg-black/60 px-2 py-1 text-[10px] font-bold text-white backdrop-blur-sm">04:12</span>
+                            </div>
+                        </div>
+                        <div class="px-1">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="text-[10px] font-bold tracking-widest text-primary uppercase">OP-04:
+                                    Tactical</span>
+                                <span class="text-[10px] font-medium text-slate-500 uppercase">File_2024_105</span>
+                            </div>
+                            <h3
+                                class="text-xl font-black uppercase tracking-tight text-white group-hover:text-primary transition-colors">
+                                Supply Drop Alpha</h3>
+                            <p class="mt-2 text-sm text-slate-400 line-clamp-2">Logistical support drop caught on
+                                multiple wide-angle helmet cameras.</p>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="group relative flex flex-col gap-4">
+                        <div
+                            class="relative aspect-video overflow-hidden rounded-lg bg-slate-custom border border-white/5">
+                            <div
+                                class="absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60">
+                            </div>
+                            <img class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                data-alt="Mist covered forest from a low angle drone"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoE4Tkd16x14CeNT7wY14fqFJTfRooDzMpVCGParweSw3R9zY6BJPnf99xaYVvHomFysHGVsqvgN2CGc-UMNSdiSVbOjCaPi6o1fXR1uVazqdnpFvDUiTfPt4p9s7S0h0SO63KXWse43oJUY1TsjNY7oQ3OEkCyp2QR9mkpa9uwkFtGiElR7H4B7Gcyg_2GkTA8EY1Jwk0bqbxGwoKUA0Rs_90ywuaZ0nTDCzoWW3kwzJLDLHVMa-rHSpVDUwgO1VstAQM_4KELZQ" />
+                            <div
+                                class="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div
+                                    class="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-background-dark shadow-[0_0_30px_rgba(115,212,17,0.5)]">
+                                    <span class="material-symbols-outlined text-4xl fill-1">play_arrow</span>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-3 left-3 z-20 flex items-center gap-2">
+                                <span
+                                    class="rounded bg-black/60 px-2 py-1 text-[10px] font-bold text-primary backdrop-blur-sm border border-primary/20">4K
+                                    REC</span>
+                                <span
+                                    class="rounded bg-black/60 px-2 py-1 text-[10px] font-bold text-white backdrop-blur-sm">06:21</span>
+                            </div>
+                        </div>
+                        <div class="px-1">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="text-[10px] font-bold tracking-widest text-primary uppercase">OP-05: Drone
+                                    Ops</span>
+                                <span class="text-[10px] font-medium text-slate-500 uppercase">File_2024_003</span>
+                            </div>
+                            <h3
+                                class="text-xl font-black uppercase tracking-tight text-white group-hover:text-primary transition-colors">
+                                Ghost Forest Trail</h3>
+                            <p class="mt-2 text-sm text-slate-400 line-clamp-2">Stealth drone navigation through dense
+                                vegetation and heavy fog.</p>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="group relative flex flex-col gap-4">
+                        <div
+                            class="relative aspect-video overflow-hidden rounded-lg bg-slate-custom border border-white/5">
+                            <div
+                                class="absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60">
+                            </div>
+                            <img class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                data-alt="Cinematic bird flying over wilderness"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm0zSZxBAsHgDTAWY3Os0DTV2TNbWjfE9F8xV0gME051nhS64sUFsBh2SIqj7xMRx6ErU510No5rZp1kR_fr3iTSEDUwVUnTcRD-GOYY4-vnSMIvAaPh0q5rad0d_Sa3asXCxw9cVpFjcs2BaeH_ip30iTPPd6d6zhyWv6MKy6N1qhr0pD0Ubugb39cWKagOnAiuFDegy6X1_DodGvDrD_rF37hvyYJ_CeIp8ECMvU-6zuW25sRG7exAY38XvAt6HvQNiAfnbhsv8" />
+                            <div
+                                class="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div
+                                    class="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-background-dark shadow-[0_0_30px_rgba(115,212,17,0.5)]">
+                                    <span class="material-symbols-outlined text-4xl fill-1">play_arrow</span>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-3 left-3 z-20 flex items-center gap-2">
+                                <span
+                                    class="rounded bg-black/60 px-2 py-1 text-[10px] font-bold text-primary backdrop-blur-sm border border-primary/20">LOG-G</span>
+                                <span
+                                    class="rounded bg-black/60 px-2 py-1 text-[10px] font-bold text-white backdrop-blur-sm">01:50</span>
+                            </div>
+                        </div>
+                        <div class="px-1">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="text-[10px] font-bold tracking-widest text-primary uppercase">OP-06:
+                                    Cinematic</span>
+                                <span class="text-[10px] font-medium text-slate-500 uppercase">File_2024_765</span>
+                            </div>
+                            <h3
+                                class="text-xl font-black uppercase tracking-tight text-white group-hover:text-primary transition-colors">
+                                Wilderness Anthem</h3>
+                            <p class="mt-2 text-sm text-slate-400 line-clamp-2">A narrative short focusing on the
+                                solitude of the frontier environment.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Section -->
+                <footer class="mt-24 border-t border-white/5 py-12">
+                    <div class="flex flex-col items-center justify-between gap-8 md:flex-row">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="flex h-8 w-8 items-center justify-center rounded bg-primary/10 text-primary border border-primary/20">
+                                <span class="material-symbols-outlined text-xl">security</span>
+                            </div>
+                            <span class="text-xs font-black uppercase tracking-widest">Marine Multimedia Ops ©
+                                2024</span>
+                        </div>
+                        <div class="flex gap-8">
+                            <a class="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-primary transition-colors"
+                                href="#">Instagram</a>
+                            <a class="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-primary transition-colors"
+                                href="#">Vimeo</a>
+                            <a class="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-primary transition-colors"
+                                href="#">YouTube</a>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-[10px] font-medium text-slate-600 uppercase tracking-widest">Lat: -6.2088° S
+                                | Long: 106.8456° E</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

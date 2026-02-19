@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MARINE_PORTFOLIO_01 | Tactical Multimedia Gallery</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#73d411",
+                        "background-light": "#f7f8f6",
+                        "background-dark": "#192210",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .scanline-overlay {
+            background: linear-gradient(to bottom, transparent 50%, rgba(115, 212, 17, 0.05) 50%);
+            background-size: 100% 4px;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-background-dark">
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+        <!-- Top Navigation -->
+        <header
+            class="sticky top-0 z-50 border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 lg:px-20 py-4">
+            <div class="flex items-center justify-between max-w-7xl mx-auto">
+                <div class="flex items-center gap-10">
+                    <div class="flex items-center gap-3">
+                        <div class="text-primary">
+                            <span class="material-symbols-outlined text-3xl">radar</span>
+                        </div>
+                        <h1 class="text-lg font-black tracking-tighter uppercase leading-none">
+                            Marine<span class="text-primary">_</span>Portfolio<span class="text-primary">_</span>01
+                        </h1>
+                    </div>
+                    <nav class="hidden md:flex items-center gap-8 uppercase text-[10px] font-bold tracking-[0.2em]">
+                        <a class="text-slate-500 hover:text-primary transition-colors" href="index.html">Mission</a>
+                        <a class="text-slate-500 hover:text-primary transition-colors" href="about.html">Specialist</a>
+                        <a class="text-primary hover:text-primary/80 transition-colors" href="gallery.html">Gallery</a>
+                        <a class="text-slate-500 hover:text-primary transition-colors" href="video.html">Video</a>
+                        <a class="text-slate-500 hover:text-primary transition-colors"
+                            href="index.html#services">Intelligence</a>
+                    </nav>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="relative hidden sm:block">
+                        <span
+                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary text-sm">search</span>
+                        <input
+                            class="bg-primary/5 border border-primary/20 rounded-lg pl-10 pr-4 py-2 text-xs focus:ring-1 focus:ring-primary focus:border-primary outline-none w-48 transition-all focus:w-64 placeholder:text-primary/30 uppercase font-mono"
+                            placeholder="COMMAND_SEARCH..." type="text" />
+                    </div>
+                    <button
+                        class="p-2 rounded-lg bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-all">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </button>
+                    <div class="h-10 w-10 rounded-lg overflow-hidden border border-primary/40 p-0.5">
+                        <div class="w-full h-full bg-cover bg-center rounded"
+                            data-alt="Operator profile avatar placeholder"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDg4HVtlFNcOZPLwqu6_5SERd4nybRc8TUlJGPCrdDW3OXiHaN-Lm4uJtaqqW5HG11JnsdA8HErhCjXuWbLDFbh-ut7MpPzlD-HtJ4W_fiDYXMjZqS5LirRidJR1_Jb9aMpufTS6hDQnxR8N0NKnilK5X2tTv9CHt9HHbTfa4_RizH0k6ZR2nXmGNV0S-17Ax_1gxy1dRL8mn_kdmuQr3u8kwNiin-zT64URtjE16Z9rLQl-Bk9QMmGGy4Xba7dOxYEK3BfHHQx3to')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 max-w-7xl mx-auto w-full px-6 lg:px-20 py-10">
+            <!-- Hero Header -->
+            <section class="mb-12">
+                <div
+                    class="relative overflow-hidden rounded-xl bg-slate-900 dark:bg-black/40 border border-primary/10 p-8 lg:p-12 mb-8">
+                    <div class="absolute inset-0 scanline-overlay opacity-20 pointer-events-none"></div>
+                    <div class="relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                        <div class="max-w-2xl">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="h-px w-8 bg-primary"></span>
+                                <span class="text-primary text-[10px] font-bold tracking-[0.3em] uppercase">Visual
+                                    Reconnaissance Unit</span>
+                            </div>
+                            <h2 class="text-4xl lg:text-6xl font-black tracking-tight mb-4 uppercase">
+                                Tactical_Multimedia<br />Portfolio_01</h2>
+                            <p class="text-slate-400 text-lg font-light leading-relaxed">High-fidelity visual
+                                intelligence across maritime operations, stealth insertions, and environmental
+                                documentation in hostile zones.</p>
+                        </div>
+                        <div class="flex flex-col gap-4 text-right">
+                            <div class="text-[10px] font-mono text-primary/60 uppercase">
+                                Lat: -6.2088° S | Lon: 106.8456° E<br />
+                                Status: Operational_Active
+                            </div>
+                            <button
+                                class="bg-primary hover:bg-primary/90 text-background-dark px-6 py-3 rounded-lg font-bold uppercase text-xs tracking-widest flex items-center justify-center gap-2 transition-all shadow-lg shadow-primary/20">
+                                <span class="material-symbols-outlined text-sm">download</span>
+                                Export Mission Data
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tactical Filter Bar -->
+                <div class="flex flex-wrap items-center justify-between gap-4 py-2 border-y border-primary/10">
+                    <div class="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0 no-scrollbar">
+                        <button
+                            class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-background-dark font-bold text-xs uppercase tracking-wider transition-all whitespace-nowrap">
+                            <span class="material-symbols-outlined text-sm">grid_view</span>
+                            All_Assets
+                        </button>
+                        <button
+                            class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/5 hover:bg-primary/10 text-primary border border-primary/20 font-bold text-xs uppercase tracking-wider transition-all whitespace-nowrap">
+                            <span class="material-symbols-outlined text-sm">target</span>
+                            Combat
+                        </button>
+                        <button
+                            class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/5 hover:bg-primary/10 text-primary border border-primary/20 font-bold text-xs uppercase tracking-wider transition-all whitespace-nowrap">
+                            <span class="material-symbols-outlined text-sm">eco</span>
+                            Nature
+                        </button>
+                        <button
+                            class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/5 hover:bg-primary/10 text-primary border border-primary/20 font-bold text-xs uppercase tracking-wider transition-all whitespace-nowrap">
+                            <span class="material-symbols-outlined text-sm">explore</span>
+                            Mission
+                        </button>
+                    </div>
+                    <div class="flex items-center gap-4 text-[10px] font-mono text-primary/40 uppercase hidden sm:flex">
+                        <span>Sort_By: Latest_Deployment</span>
+                        <span
+                            class="material-symbols-outlined text-sm cursor-pointer hover:text-primary">filter_list</span>
+                    </div>
+                </div>
+            </section>
+            <!-- Media Grid -->
+            <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Gallery Item 1 -->
+                <div
+                    class="group relative aspect-square overflow-hidden rounded-xl border border-primary/10 bg-slate-900">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Naval fleet moving through heavy mist at dawn"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuABS6Hvltk3bD002nd6HJnRL1RA_vNzgkEyuOlv-4uwSjMkF_o7C_4bUzVZLGRXj_SCeD1kisRvcQFr5KhThEPJ_MozwkOVYBNPkYW_oPzCX3o11v2Y2nENgMLGNxTpn2QzByMiE_47xQTVXYkNVsvabTlhN-Qtod-NO33o2lm8WFpm4Hf_bC1VGPw8-vhtTgjYUUz6XLa5QX_prBWDbN1coeWytwNOEtT0KpRkCmb6xFGo9ZYtgXi7qs03YXEOaciivlGLuyI-q2g')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent opacity-60 group-hover:opacity-80 transition-opacity">
+                    </div>
+                    <div class="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div
+                            class="bg-primary/90 text-background-dark px-2 py-1 rounded text-[10px] font-bold uppercase tracking-tighter">
+                            Combat</div>
+                    </div>
+                    <div
+                        class="absolute inset-0 border-0 group-hover:border-[8px] border-primary/20 transition-all duration-300 pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <p class="text-primary font-mono text-[10px] mb-1">UNIT_LOG: #772-B</p>
+                        <h3
+                            class="text-white font-bold uppercase tracking-wide leading-tight group-hover:text-primary transition-colors">
+                            Operation Silent Tide</h3>
+                        <div
+                            class="mt-3 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity delay-75">
+                            <span class="text-[10px] text-slate-400 font-mono">ISO 400 | f/2.8</span>
+                            <span class="material-symbols-outlined text-primary text-xl cursor-pointer">zoom_in</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gallery Item 2 -->
+                <div
+                    class="group relative aspect-square overflow-hidden rounded-xl border border-primary/10 bg-slate-900">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Close up of coral reef with tactical underwater gear nearby"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_AWONXPgHRP9UoMNsBoWkzKYuvOBQj9w_vEesjbsIKG9wr__TnMC_TRCZ25bk3sLvujQq6HP8kIBNoN78FgBGLG87InV1pbFRCwFPTvrassDEE_3v7AAjr3A7nsmFPc_qz2f7FgZMLNhPUjJPnnrpFV727YuWiwsWgIw6MBdvbnKqj5m93Cl2_dQd3EoQbysutZ0gtFniLB9HtnP27p8HEZqnnzOhpqcigmL7dnvzM3YcykMxep_kYyR_VqWlX7WVAzpItHAwAI0')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent opacity-60 group-hover:opacity-80 transition-opacity">
+                    </div>
+                    <div class="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div
+                            class="bg-primary/90 text-background-dark px-2 py-1 rounded text-[10px] font-bold uppercase tracking-tighter">
+                            Nature</div>
+                    </div>
+                    <div
+                        class="absolute inset-0 border-0 group-hover:border-[8px] border-primary/20 transition-all duration-300 pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <p class="text-primary font-mono text-[10px] mb-1">UNIT_LOG: #441-A</p>
+                        <h3
+                            class="text-white font-bold uppercase tracking-wide leading-tight group-hover:text-primary transition-colors">
+                            Coastal Reconnaissance</h3>
+                        <div
+                            class="mt-3 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity delay-75">
+                            <span class="text-[10px] text-slate-400 font-mono">ISO 100 | f/11</span>
+                            <span class="material-symbols-outlined text-primary text-xl cursor-pointer">zoom_in</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gallery Item 3 -->
+                <div
+                    class="group relative aspect-square overflow-hidden rounded-xl border border-primary/10 bg-slate-900">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Grainy green night vision image of military operation"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5JXz-oqHIledoz-t2ZWwKiYTnhmWGH9usbtr5jvc0q57fLNtclnCNDnDm9McaUJ-T_cus-8EYc128jvQJDsHBSYgYBy3ApUE11cwj3rXQG_1TNvi3p5HpWiuRJ_2d1ni33g7463JweceoPiDx2bbyQ7MqNA7r3VylqY1oYwMazOdbqUJgm68fTm7UswNb_VZQufp3ozEVk1o_l6XHZE8c3r_xuTwJilyZ83TPt6XODIIFm3ic6Ni330ZOOoKtyCpiv45p0ZhBjeU')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent opacity-60 group-hover:opacity-80 transition-opacity">
+                    </div>
+                    <div class="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div
+                            class="bg-primary/90 text-background-dark px-2 py-1 rounded text-[10px] font-bold uppercase tracking-tighter">
+                            Mission</div>
+                    </div>
+                    <div
+                        class="absolute inset-0 border-0 group-hover:border-[8px] border-primary/20 transition-all duration-300 pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <p class="text-primary font-mono text-[10px] mb-1">UNIT_LOG: #902-X</p>
+                        <h3
+                            class="text-white font-bold uppercase tracking-wide leading-tight group-hover:text-primary transition-colors">
+                            Night Vision Drill</h3>
+                        <div
+                            class="mt-3 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity delay-75">
+                            <span class="text-[10px] text-slate-400 font-mono">NVG_ENHANCED_V2</span>
+                            <span class="material-symbols-outlined text-primary text-xl cursor-pointer">zoom_in</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gallery Item 4 -->
+                <div
+                    class="group relative aspect-square overflow-hidden rounded-xl border border-primary/10 bg-slate-900">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                        data-alt="High altitude helicopter view of rugged snowy mountains"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCHa93TlJVVm8ipOEAXBdyOBjiNzCzm6mJgHkGpGTLMzfuq410-IPcyDDv2V6qudEJG2ktZIyUSBXZEe4ubAwKHhcXTY7XaJX9MnNQ1kZaweP-bqr8i2NSp7Fc5_0182MLfMtf4WVVceRPyucipQCtso0PA5sGkDnN89_CUozpUFJjEjnoAt9tor37z6YqGQDFhZg4iacF1xGrJcpTs_6iQq7D9TPPPxeE_toEEYwvoqI1ZgkXEQ6xKSpZJQNp9KGCeNmMOEos8pM4')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent opacity-60 group-hover:opacity-80 transition-opacity">
+                    </div>
+                    <div class="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div
+                            class="bg-primary/90 text-background-dark px-2 py-1 rounded text-[10px] font-bold uppercase tracking-tighter">
+                            Mission</div>
+                    </div>
+                    <div
+                        class="absolute inset-0 border-0 group-hover:border-[8px] border-primary/20 transition-all duration-300 pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <p class="text-primary font-mono text-[10px] mb-1">UNIT_LOG: #118-C</p>
+                        <h3
+                            class="text-white font-bold uppercase tracking-wide leading-tight group-hover:text-primary transition-colors">
+                            Mountain Extraction</h3>
+                        <div
+                            class="mt-3 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity delay-75">
+                            <span class="text-[10px] text-slate-400 font-mono">ALT 3500m</span>
+                            <span class="material-symbols-outlined text-primary text-xl cursor-pointer">zoom_in</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gallery Item 5 -->
+                <div
+                    class="group relative aspect-square overflow-hidden rounded-xl border border-primary/10 bg-slate-900">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Amphibious vehicle launching from a large carrier ship"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBDoCmJjrBPtRSMH4KULUQ74gXRtzLC3Z_e_UGynTCNWqnj0n9LYa6qIJMUO6jjOd7RNvvj3hpiTOxcrKbT9NaztdRu9wfYv7OMa8S7YpwQvsPzbm0NK2odyxKJfN11p_XxMmogMLDZXE0dJWdgNiu2XPTHyGCVDHNxeMcB8MApUVTUMLUJRwKPfidFKHq8VRQNKfCdduSQAU5MnjMvIq0ckItPIENm1Lvyu3mpHStN3fw3-soIw6UpURR2bm87Kzlwc7ZNhin87L0')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent opacity-60 group-hover:opacity-80 transition-opacity">
+                    </div>
+                    <div class="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div
+                            class="bg-primary/90 text-background-dark px-2 py-1 rounded text-[10px] font-bold uppercase tracking-tighter">
+                            Combat</div>
+                    </div>
+                    <div
+                        class="absolute inset-0 border-0 group-hover:border-[8px] border-primary/20 transition-all duration-300 pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <p class="text-primary font-mono text-[10px] mb-1">UNIT_LOG: #505-F</p>
+                        <h3
+                            class="text-white font-bold uppercase tracking-wide leading-tight group-hover:text-primary transition-colors">
+                            Amphibious Assault</h3>
+                        <div
+                            class="mt-3 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity delay-75">
+                            <span class="text-[10px] text-slate-400 font-mono">ISO 800 | 1/2000s</span>
+                            <span class="material-symbols-outlined text-primary text-xl cursor-pointer">zoom_in</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gallery Item 6 -->
+                <div
+                    class="group relative aspect-square overflow-hidden rounded-xl border border-primary/10 bg-slate-900">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Dark silhouette of a diver entering water at night"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB4MXU2OWZxn1eWagvXLXNPwptXs9bopoQ4Iv1_TLnXwDl-PzV6ho2UTos-t5J100VUT5cvickn7gyJRBx7BnWhQEBxjevmEtwzeXcFNhA7sjf4xO89Qw7VMlIvsaq2nGgCyfrRCZUFoHX4ie0-a7jHlHthFpUejE10sPOr36oEyG2uyBUejCXoGB0gNGzZXhgZfTUpwuL8WvPGYyp9Nzv-maQnhgi30PaZBu1tXTGbl0RpVRkTdhshmCgL7f4Rx_pLUlap4DChVug')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent opacity-60 group-hover:opacity-80 transition-opacity">
+                    </div>
+                    <div class="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div
+                            class="bg-primary/90 text-background-dark px-2 py-1 rounded text-[10px] font-bold uppercase tracking-tighter">
+                            Mission</div>
+                    </div>
+                    <div
+                        class="absolute inset-0 border-0 group-hover:border-[8px] border-primary/20 transition-all duration-300 pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <p class="text-primary font-mono text-[10px] mb-1">UNIT_LOG: #001-Z</p>
+                        <h3
+                            class="text-white font-bold uppercase tracking-wide leading-tight group-hover:text-primary transition-colors">
+                            Stealth Insertion</h3>
+                        <div
+                            class="mt-3 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity delay-75">
+                            <span class="text-[10px] text-slate-400 font-mono">DEPT: 12m</span>
+                            <span class="material-symbols-outlined text-primary text-xl cursor-pointer">zoom_in</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gallery Item 7 -->
+                <div
+                    class="group relative aspect-square overflow-hidden rounded-xl border border-primary/10 bg-slate-900">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Vast expanse of arctic ocean with broken ice"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0T2VNUPjKKQcHHZU1L7w8pTMJnbCknsEd_FN83KObfeMRx0bvqSb8BfJ8tx3GE2u215cguBtskD84OCrBeSEw-lX_Q_0s9XmxrSJZTrCkdFZ4k6sXgkN_jUOwZUUm8IqzdP_max1MreOYsHtjqOfhtVwzmqg1sm6dUvsZT1VdwmRrAbJaSrUv9LjwqAax__CY1aPqQPf_--7p0W6YJNJAB2nbXZTZKRqPJZrGMjIeodnUOBylew36cYSJiifqtwfHRQHzcGnf8JM')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent opacity-60 group-hover:opacity-80 transition-opacity">
+                    </div>
+                    <div class="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div
+                            class="bg-primary/90 text-background-dark px-2 py-1 rounded text-[10px] font-bold uppercase tracking-tighter">
+                            Nature</div>
+                    </div>
+                    <div
+                        class="absolute inset-0 border-0 group-hover:border-[8px] border-primary/20 transition-all duration-300 pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <p class="text-primary font-mono text-[10px] mb-1">UNIT_LOG: #882-P</p>
+                        <h3
+                            class="text-white font-bold uppercase tracking-wide leading-tight group-hover:text-primary transition-colors">
+                            Arctic Perimeter</h3>
+                        <div
+                            class="mt-3 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity delay-75">
+                            <span class="text-[10px] text-slate-400 font-mono">ISO 50 | f/16</span>
+                            <span class="material-symbols-outlined text-primary text-xl cursor-pointer">zoom_in</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gallery Item 8 -->
+                <div
+                    class="group relative aspect-square overflow-hidden rounded-xl border border-primary/10 bg-slate-900">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Tactical map projected on a rugged screen in a dark room"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCI-V7MC5NlEm_1v2EhROfUb5Mwn8NYSdfGj8UqrKcl_cUB-PbKCnlI5UD3bKzJkLU-eX_5S2rixKHxvrh9sBWOhD1DmtMnNc1bIalF3IUndKYMSIwu_KQOQwe1VrZQtA0C_iB4sx9tid5vWjI4kM9Ejkl5gVGBVHarh0A9gZZxu-uO3wUrINkM140rvsnE2PbA7KnxiT5OWJUMitzv70FymcNr61PEzQ7-wCi70_q9fG1nNAa2BjbIGJyCMI03CrWNlBhWlvfu3zs')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent opacity-60 group-hover:opacity-80 transition-opacity">
+                    </div>
+                    <div class="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div
+                            class="bg-primary/90 text-background-dark px-2 py-1 rounded text-[10px] font-bold uppercase tracking-tighter">
+                            Mission</div>
+                    </div>
+                    <div
+                        class="absolute inset-0 border-0 group-hover:border-[8px] border-primary/20 transition-all duration-300 pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <p class="text-primary font-mono text-[10px] mb-1">UNIT_LOG: #331-G</p>
+                        <h3
+                            class="text-white font-bold uppercase tracking-wide leading-tight group-hover:text-primary transition-colors">
+                            Command Center Ops</h3>
+                        <div
+                            class="mt-3 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity delay-75">
+                            <span class="text-[10px] text-slate-400 font-mono">COORD: 34.05°N</span>
+                            <span class="material-symbols-outlined text-primary text-xl cursor-pointer">zoom_in</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Loading Indicator -->
+            <div class="flex flex-col items-center justify-center py-20">
+                <div class="w-12 h-12 border-2 border-primary/20 border-t-primary rounded-full animate-spin mb-4"></div>
+                <p class="text-[10px] font-mono text-primary/40 uppercase tracking-[0.4em] animate-pulse">
+                    Syncing_Satellite_Data...</p>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="mt-auto border-t border-primary/10 bg-black/40 py-12 px-6 lg:px-20">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="flex flex-col items-center md:items-start gap-4">
+                    <div class="flex items-center gap-2 text-primary/60">
+                        <span class="material-symbols-outlined text-sm">verified_user</span>
+                        <span class="text-[10px] font-mono uppercase tracking-widest">Secure_Protocol_Active</span>
+                    </div>
+                    <div class="text-[10px] font-mono text-slate-500 uppercase">
+                        © 2024 Marine_Tactical_Group. Unauthorized duplication is a violation of international maritime
+                        law.
+                    </div>
+                </div>
+                <div class="flex gap-6">
+                    <a class="text-slate-500 hover:text-primary transition-colors" href="#">
+                        <span class="material-symbols-outlined">share</span>
+                    </a>
+                    <a class="text-slate-500 hover:text-primary transition-colors" href="#">
+                        <span class="material-symbols-outlined">mail</span>
+                    </a>
+                    <a class="text-slate-500 hover:text-primary transition-colors" href="#">
+                        <span class="material-symbols-outlined">rss_feed</span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
