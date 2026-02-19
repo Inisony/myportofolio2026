@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Tactical Media Operator | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#73d411",
+                        "background-light": "#f7f8f6",
+                        "background-dark": "#0a0c08",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .tactical-grid {
+            background-image: radial-gradient(circle, #73d41115 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-background-dark">
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+        <!-- Navigation Bar -->
+        <header
+            class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+            <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+                <div class="flex items-center gap-3">
+                    <div class="flex h-10 w-10 items-center justify-center rounded bg-primary text-background-dark">
+                        <span class="material-symbols-outlined font-bold">target</span>
+                    </div>
+                    <span class="text-lg font-black tracking-tighter uppercase">TM OPERATOR</span>
+                </div>
+                <nav class="hidden md:flex items-center gap-10">
+                    <a class="text-sm font-semibold uppercase tracking-widest hover:text-primary transition-colors"
+                        href="#">Home</a>
+                    <a class="text-sm font-semibold uppercase tracking-widest hover:text-primary transition-colors"
+                        href="#portfolio">Portfolio</a>
+                    <a class="text-sm font-semibold uppercase tracking-widest hover:text-primary transition-colors"
+                        href="#services">Services</a>
+                    <a class="text-sm font-semibold uppercase tracking-widest hover:text-primary transition-colors"
+                        href="#contact">Contact</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="hidden sm:flex h-10 items-center justify-center rounded bg-primary px-6 text-xs font-bold uppercase tracking-widest text-background-dark hover:brightness-110 transition-all">
+                        Deploy Now
+                    </button>
+                    <div class="h-10 w-10 rounded-full border-2 border-primary/30 bg-cover bg-center overflow-hidden"
+                        data-alt="Close up portrait of a professional media operator"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA0_YD53Hkja6HXVsjDaYmko7TY6fN9m0hzOFLePGd_s-SJGHa8bEoi2drO5obC-fQ9vMoz9dyhYIPxO00eFaLrcFzlaBCS99psiBMnlkL_mDwKS4mu0PIPGUhnERr3GA05RvmEsBIcDafmDjIfZwxJQVRb84ZDXkWC9GQ1rsLY_R-ImBQE4V8tNsP_pxhF8Hofrr9hGKlyX-mNGZOwLjsMvrofyTFZls5MS5KPwyW2XUIQIe-z0SQ4lSim2las-QSAgGcLIAIYmQ0')">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Hero Section -->
+        <section class="relative flex min-h-[85vh] items-center justify-center overflow-hidden px-6">
+            <div class="absolute inset-0 z-0">
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-background-dark/60 via-background-dark/40 to-background-dark z-10">
+                </div>
+                <img alt="Cinematic drone shot of Indonesian archipelago" class="h-full w-full object-cover"
+                    data-alt="Atmospheric landscape shot of lush tropical mountains and coastline"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm6k8-mHMX38H2yIbvqbrz2qKy_GYl1W6dg42rdIar5SapQSfH7h9RW4Lt0JjbepJ-JVsgO4DLS01_1avFQfRku1AF5QvpeS-uSN88vIfFYwJvbYhkA9SDgw74qVYaMUp8WH5mMjMlZ1Z0_2o26-V4UpGOsvb9T6NmIOC4haO0EljYqeBe_foqbWJnUtJRbSrqpEpeOLOsBiIrk5NdbcHD-FAy1XI6Rdo8WOQ4Por96vqkPrsIiRyKA55SfySwzF7J8yzGiaBGM3w" />
+            </div>
+            <div class="relative z-20 mx-auto max-w-5xl text-center">
+                <div
+                    class="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 backdrop-blur-sm">
+                    <span class="relative flex h-2 w-2">
+                        <span
+                            class="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
+                        <span class="relative inline-flex h-2 w-2 rounded-full bg-primary"></span>
+                    </span>
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">Mission Status:
+                        Available for Hire</span>
+                </div>
+                <h1 class="mb-6 text-5xl font-black uppercase tracking-tighter sm:text-7xl lg:text-8xl">
+                    Tactical <span class="text-primary">Media</span> Operator
+                </h1>
+                <p class="mx-auto max-w-2xl text-lg font-medium text-slate-400 sm:text-xl">
+                    Indonesian Marine | Photographer | Videographer | Drone Pilot | Editor
+                </p>
+                <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                    <button
+                        class="group flex h-14 w-full items-center justify-center gap-3 rounded bg-primary px-8 text-sm font-bold uppercase tracking-widest text-background-dark sm:w-auto hover:scale-105 transition-transform">
+                        Explore Portfolio
+                        <span
+                            class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </button>
+                    <button
+                        class="flex h-14 w-full items-center justify-center gap-3 rounded border border-white/20 bg-white/5 px-8 text-sm font-bold uppercase tracking-widest backdrop-blur-md sm:w-auto hover:bg-white/10 transition-colors">
+                        View Showreel
+                    </button>
+                </div>
+            </div>
+            <!-- Technical Decor -->
+            <div class="absolute bottom-10 left-10 hidden lg:block">
+                <p class="text-[10px] font-mono text-primary/50 uppercase tracking-widest">Lat: -6.2088° S | Long:
+                    106.8456° E</p>
+            </div>
+            <div class="absolute bottom-10 right-10 hidden lg:block">
+                <p class="text-[10px] font-mono text-primary/50 uppercase tracking-widest">System: Operational //
+                    v.4.0.2</p>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section class="tactical-grid py-24 px-6 border-y border-primary/5">
+            <div class="mx-auto max-w-7xl">
+                <div class="grid gap-16 lg:grid-cols-2 items-center">
+                    <div class="relative">
+                        <div class="absolute -left-4 -top-4 h-24 w-24 border-l-2 border-t-2 border-primary"></div>
+                        <img alt="Professional camera operator in tactical gear"
+                            class="relative z-10 rounded shadow-2xl grayscale hover:grayscale-0 transition-all duration-500"
+                            data-alt="Marine media operator holding high-end cinema camera in the field"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwF2WZj8Mo7lhuVL6b0RxUdkNAuXy1_mfP9k5eh7VxYfTfatA1CZOPmsR3uz6aACXjV6KR0mz8fBA3XdF3rSjRxUg1nHmkweiBtHFCdXnBeM0W9LiayuGRYgnKiH0aVqUUaC1uGQNwj-aAkC4rdIv4jHAVHBMROvuALzsfO9YjaRp7yFFjMNuxDpPJI23skvHV2Zm8jWi0JL4gg7BSWMejFyMrMBJJrsBZqe-mon6I2F1ILWxpFI1_EfOimptlvFSOYHx1lPjXn-g" />
+                        <div class="absolute -bottom-4 -right-4 h-24 w-24 border-b-2 border-r-2 border-primary"></div>
+                    </div>
+                    <div class="flex flex-col gap-8">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-[0.3em] text-primary">Strategic
+                                Advantage</span>
+                            <h2 class="mt-2 text-4xl font-black uppercase tracking-tight sm:text-5xl">Discipline Meets
+                                Creativity</h2>
+                        </div>
+                        <p class="text-lg leading-relaxed text-slate-400">
+                            As an active Indonesian Marine, I bring a unique tactical perspective to every frame. My
+                            background enforces a level of punctuality, precision, and reliability that is rare in the
+                            creative industry. I am mission-ready for any environment—from high-stakes military drills
+                            to cinematic commercial productions.
+                        </p>
+                        <div class="grid gap-6 sm:grid-cols-2">
+                            <div class="flex flex-col gap-2 rounded border border-white/5 bg-white/5 p-4">
+                                <span class="material-symbols-outlined text-primary">military_tech</span>
+                                <h3 class="font-bold uppercase text-sm tracking-wider">Combat Ready</h3>
+                                <p class="text-xs text-slate-500">Capable of operating in extreme conditions and remote
+                                    terrain.</p>
+                            </div>
+                            <div class="flex flex-col gap-2 rounded border border-white/5 bg-white/5 p-4">
+                                <span class="material-symbols-outlined text-primary">precision_manufacturing</span>
+                                <h3 class="font-bold uppercase text-sm tracking-wider">High-End Gear</h3>
+                                <p class="text-xs text-slate-500">Advanced mastery of 6K cinema cameras and tactical
+                                    drone systems.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Featured Work (Mission Logs) -->
+        <section class="py-24 px-6 bg-background-light dark:bg-background-dark" id="portfolio">
+            <div class="mx-auto max-w-7xl">
+                <div
+                    class="flex flex-col items-center justify-between gap-4 border-b border-primary/20 pb-10 mb-12 sm:flex-row">
+                    <div>
+                        <h2 class="text-4xl font-black uppercase tracking-tight">Mission Logs</h2>
+                        <p class="mt-2 text-slate-500 font-medium">Recent Visual Deployments</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <button
+                            class="h-10 w-10 flex items-center justify-center rounded border border-white/10 hover:border-primary transition-colors">
+                            <span class="material-symbols-outlined text-sm">grid_view</span>
+                        </button>
+                        <button
+                            class="h-10 w-10 flex items-center justify-center rounded border border-white/10 hover:border-primary transition-colors">
+                            <span class="material-symbols-outlined text-sm">view_agenda</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- Project Card 1 -->
+                    <div class="group relative aspect-[4/5] overflow-hidden rounded bg-slate-800">
+                        <img alt="Urban mission photography"
+                            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            data-alt="Cinematic night photography of neon-lit urban architecture"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_oaOfw6YOQJXF9smOvv6xwEIG-J3J1mUMholecADJW8erQd5gqO-p9cw89ALgiyxYg364Dzq02rFnNwwKpAu7Tyaf36u_ZexTHWuVbisz68c6sTvnEovuPvAHc7shsRmfv-PwQbQL7BDOHkNOCrKOxAruKBd9HbdWyG3SF6kdl4n6HfQfst1ZKF2nkEsZNE3U9k6rmEAeaBKjz2qz1z2tQyugB2QIxksiT8CArmwPws-26J3B6acRjtfPdNlrMMn6gPQhnNraWXI" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-90">
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-primary">Log #001 //
+                                Photography</span>
+                            <h3 class="text-xl font-bold uppercase mt-1">Neon Perimeter</h3>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="group relative aspect-[4/5] overflow-hidden rounded bg-slate-800">
+                        <img alt="Aerial drone footage of forest"
+                            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            data-alt="Overhead drone shot of a thick misty tropical jungle canopy"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8tD4hbIJMJTTXXK7Jcr3BdLU_GLT-kNEPflInc31Wo4-EllV7Gybo-uZAvlg3pkBEV6aKsBlQM885mqwzV0_gci7RX0Qbz1v0akNTY0vzWyRc3z7XnEXHxGDVp3GemSxgMUp_CJ6OjJC09ge6BjfisjBibDhn9SfI46RnVejJY-Szm6azrl3tvKUBopGiKOplLy8wwtkqF_RK8kgNsJ6-Hv_P8dn8MUhX9BQPiZiYTwQvgkwgNstHQ0_MjMzDuhkupK6Mb1e7Hnc" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-90">
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-primary">Log #002 // Drone
+                                Ops</span>
+                            <h3 class="text-xl font-bold uppercase mt-1">Canopy Recon</h3>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="group relative aspect-[4/5] overflow-hidden rounded bg-slate-800 lg:col-span-1">
+                        <img alt="Video production set"
+                            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            data-alt="Behind the scenes photo of a professional cinema camera on a gimbal"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLOPY9oNyrH5qjKMHDS87Lcn6aQx5IdlivDaoefxt27sg_ga_gB2EcBNY-cqF97nkvycmHe0m2PJkpsvNNY5SgRad6fbDGb3tJm9hug7mv4dI1N_bi1LSvxstQFsmTZGrnawEwN4RgfUzIYyD0HyyaQTX0VQCR1P8uSOjY7FEYNxZqzHlXS1b8zWw720CBPlCNVZcMpnhNnld6YU1jxU7Jf8cwPZ9x_6iNDaye9ZB4mwgUfYDscuF87EiLUpWjjKb-BSeaXDFjn20" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-90">
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-primary">Log #003 //
+                                Videography</span>
+                            <h3 class="text-xl font-bold uppercase mt-1">Tactical Frame</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 flex justify-center">
+                    <button
+                        class="border-b-2 border-primary pb-1 text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors">Load
+                        Archive</button>
+                </div>
+            </div>
+        </section>
+        <!-- Services Section -->
+        <section class="bg-primary/5 py-24 px-6" id="services">
+            <div class="mx-auto max-w-7xl">
+                <div class="mb-16 text-center">
+                    <h2 class="text-4xl font-black uppercase tracking-tight sm:text-5xl">Capabilities</h2>
+                    <p class="mx-auto mt-4 max-w-2xl text-slate-500">End-to-end multimedia solutions with a professional
+                        military edge.</p>
+                </div>
+                <div class="grid gap-px bg-primary/10 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- Service 1 -->
+                    <div class="bg-background-dark p-8 group hover:bg-primary/5 transition-colors">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-6">camera</span>
+                        <h3 class="text-xl font-bold uppercase tracking-wide mb-3">Photography</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">High-stakes commercial, editorial, and
+                            documentary photography with a unique perspective.</p>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="bg-background-dark p-8 group hover:bg-primary/5 transition-colors">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-6">videocam</span>
+                        <h3 class="text-xl font-bold uppercase tracking-wide mb-3">Videography</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Cinematic storytelling and commercial
+                            production with professional-grade stabilization.</p>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="bg-background-dark p-8 group hover:bg-primary/5 transition-colors">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-6">airplanemode_active</span>
+                        <h3 class="text-xl font-bold uppercase tracking-wide mb-3">Drone Operations</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Certified aerial intelligence and cinematic
+                            drone footage in challenging environments.</p>
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="bg-background-dark p-8 group hover:bg-primary/5 transition-colors">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-6">movie_edit</span>
+                        <h3 class="text-xl font-bold uppercase tracking-wide mb-3">Post-Production</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Expert color grading and high-paced editing
+                            tailored for modern platforms.</p>
+                    </div>
+                    <!-- Service 5 -->
+                    <div class="bg-background-dark p-8 group hover:bg-primary/5 transition-colors">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-6">hub</span>
+                        <h3 class="text-xl font-bold uppercase tracking-wide mb-3">Social Strategy</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Multimedia content management and strategy for
+                            high-impact social presence.</p>
+                    </div>
+                    <!-- Service 6 -->
+                    <div class="bg-background-dark p-8 group hover:bg-primary/5 transition-colors">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-6">security</span>
+                        <h3 class="text-xl font-bold uppercase tracking-wide mb-3">Secure Assets</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Guaranteed data security and professional
+                            handling of sensitive visual materials.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="border-t border-primary/10 bg-background-dark py-12 px-6" id="contact">
+            <div class="mx-auto max-w-7xl">
+                <div class="flex flex-col items-center justify-between gap-10 md:flex-row">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="flex h-8 w-8 items-center justify-center rounded bg-primary text-background-dark">
+                                <span class="material-symbols-outlined font-bold text-base">target</span>
+                            </div>
+                            <span class="text-md font-black tracking-tighter uppercase">TM OPERATOR</span>
+                        </div>
+                        <p class="max-w-xs text-xs text-slate-500">
+                            Professional Multimedia Solutions by a Marine. Serving across the Indonesian archipelago and
+                            beyond.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap justify-center gap-10">
+                        <div class="flex flex-col gap-3">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-primary">Direct
+                                Comms</span>
+                            <a class="text-sm font-semibold hover:text-primary transition-colors"
+                                href="mailto:ops@tmoperator.id">ops@tmoperator.id</a>
+                            <a class="text-sm font-semibold hover:text-primary transition-colors"
+                                href="tel:+62812345678">+62 812 3456 7890</a>
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-primary">Intelligence
+                                Feed</span>
+                            <div class="flex gap-4">
+                                <a class="text-slate-400 hover:text-primary" href="#"><span
+                                        class="material-symbols-outlined">photo_camera</span></a>
+                                <a class="text-slate-400 hover:text-primary" href="#"><span
+                                        class="material-symbols-outlined">video_library</span></a>
+                                <a class="text-slate-400 hover:text-primary" href="#"><span
+                                        class="material-symbols-outlined">public</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="mt-12 flex flex-col items-center justify-between border-t border-white/5 pt-8 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-600 md:flex-row">
+                    <span>© 2024 Tactical Media Operator. All Rights Reserved.</span>
+                    <span class="mt-4 md:mt-0">Designed for Deployment</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
