@@ -54,44 +54,50 @@
     class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-background-dark">
     <div class="relative flex min-h-screen flex-col overflow-x-hidden">
         <!-- Top Navigation -->
-        <header
-            class="sticky top-0 z-50 border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 lg:px-20 py-4">
+        <header class="sticky top-0 z-50 bg-background-dark/90 backdrop-blur-md px-6 lg:px-20 py-4">
             <div class="flex items-center justify-between max-w-7xl mx-auto">
                 <div class="flex items-center gap-10">
                     <div class="flex items-center gap-3">
-                        <div class="text-primary">
-                            <span class="material-symbols-outlined text-3xl">radar</span>
+                        <div class="text-primary"><span class="material-symbols-outlined text-2xl">track_changes</span>
                         </div>
-                        <h1 class="text-lg font-black tracking-tighter uppercase leading-none">
-                            Marine<span class="text-primary">_</span>Portfolio<span class="text-primary">_</span>01
-                        </h1>
+                        <h1 class="text-lg font-black tracking-tighter uppercase leading-none">TM OPERATOR</h1>
                     </div>
-                    <nav class="hidden md:flex items-center gap-8 uppercase text-[10px] font-bold tracking-[0.2em]">
-                        <a class="text-slate-500 hover:text-primary transition-colors" href="index.html">Mission</a>
-                        <a class="text-slate-500 hover:text-primary transition-colors" href="about.html">Specialist</a>
-                        <a class="text-primary hover:text-primary/80 transition-colors" href="gallery.html">Gallery</a>
-                        <a class="text-slate-500 hover:text-primary transition-colors" href="video.html">Video</a>
-                        <a class="text-slate-500 hover:text-primary transition-colors"
-                            href="index.html#services">Intelligence</a>
-                        <a class="text-slate-500 hover:text-primary transition-colors" href="contact.html">Contact</a>
-                    </nav>
+                    <nav class="hidden md:flex items-center gap-8 uppercase text-[10px] font-bold tracking-[0.2em]"><a
+                            class="text-slate-500 hover:text-primary transition-colors" href="#">HOME</a><a
+                            class="text-primary" href="#">PORTFOLIO</a><a
+                            class="text-slate-500 hover:text-primary transition-colors" href="#">SERVICES</a><a
+                            class="text-slate-500 hover:text-primary transition-colors" href="#">CONTACT</a></nav>
                 </div>
-                <div class="flex items-center gap-4">
-                    <div class="relative hidden sm:block">
-                        <span
-                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary text-sm">search</span>
-                        <input
-                            class="bg-primary/5 border border-primary/20 rounded-lg pl-10 pr-4 py-2 text-xs focus:ring-1 focus:ring-primary focus:border-primary outline-none w-48 transition-all focus:w-64 placeholder:text-primary/30 uppercase font-mono"
-                            placeholder="COMMAND_SEARCH..." type="text" />
-                    </div>
-                    <button
-                        class="p-2 rounded-lg bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-all">
-                        <span class="material-symbols-outlined">notifications</span>
-                    </button>
-                    <div class="h-10 w-10 rounded-lg overflow-hidden border border-primary/40 p-0.5">
-                        <div class="w-full h-full bg-cover bg-center rounded"
-                            data-alt="Operator profile avatar placeholder"
-                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDg4HVtlFNcOZPLwqu6_5SERd4nybRc8TUlJGPCrdDW3OXiHaN-Lm4uJtaqqW5HG11JnsdA8HErhCjXuWbLDFbh-ut7MpPzlD-HtJ4W_fiDYXMjZqS5LirRidJR1_Jb9aMpufTS6hDQnxR8N0NKnilK5X2tTv9CHt9HHbTfa4_RizH0k6ZR2nXmGNV0S-17Ax_1gxy1dRL8mn_kdmuQr3u8kwNiin-zT64URtjE16Z9rLQl-Bk9QMmGGy4Xba7dOxYEK3BfHHQx3to')">
+                <div class="flex items-center gap-4"><button
+                        class="bg-primary hover:bg-primary/90 text-background-dark px-5 py-2 rounded font-black uppercase text-[10px] tracking-widest transition-all">DEPLOY
+                        NOW</button>
+                    <div class="relative group">
+                        <button id="admin-trigger"
+                            class="h-8 w-8 rounded-full overflow-hidden border border-primary/40 hover:border-primary transition-all">
+                            <div class="w-full h-full bg-cover bg-center"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDg4HVtlFNcOZPLwqu6_5SERd4nybRc8TUlJGPCrdDW3OXiHaN-Lm4uJtaqqW5HG11JnsdA8HErhCjXuWbLDFbh-ut7MpPzlD-HtJ4W_fiDYXMjZqS5LirRidJR1_Jb9aMpufTS6hDQnxR8N0NKnilK5X2tTv9CHt9HHbTfa4_RizH0k6ZR2nXmGNV0S-17Ax_1gxy1dRL8mn_kdmuQr3u8kwNiin-zT64URtjE16Z9rLQl-Bk9QMmGGy4Xba7dOxYEK3BfHHQx3to')">
+                            </div>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div id="admin-dropdown"
+                            class="absolute right-0 mt-2 w-48 bg-background-dark/95 border border-primary/20 rounded-lg shadow-2xl backdrop-blur-md hidden z-50 overflow-hidden">
+                            <div class="px-4 py-3 border-b border-primary/10">
+                                <p class="text-[10px] font-bold text-primary uppercase tracking-widest">Operator Session
+                                </p>
+                                <p class="text-xs font-bold text-slate-300">Unit_Admin</p>
+                            </div>
+                            <div class="py-2">
+                                <a href="admin-login.html"
+                                    class="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 text-slate-400 hover:text-primary transition-all">
+                                    <span class="material-symbols-outlined text-sm">terminal</span>
+                                    <span class="text-[10px] font-bold uppercase tracking-widest">Command Access</span>
+                                </a>
+                                <a href="admin-dashboard.html"
+                                    class="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 text-slate-400 hover:text-primary transition-all">
+                                    <span class="material-symbols-outlined text-sm">dashboard</span>
+                                    <span class="text-[10px] font-bold uppercase tracking-widest">Dashboard</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -104,21 +110,25 @@
                     class="relative overflow-hidden rounded-xl bg-slate-900 dark:bg-black/40 border border-primary/10 p-8 lg:p-12 mb-8">
                     <div class="absolute inset-0 scanline-overlay opacity-20 pointer-events-none"></div>
                     <div class="relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
-                        <div class="max-w-2xl">
+                        <div
+                            class="max-w-2xl mx-auto md:mx-0 flex flex-col items-center md:items-start text-center md:text-left">
                             <div class="flex items-center gap-2 mb-4">
-                                <span class="h-px w-8 bg-primary"></span>
-                                <span class="text-primary text-[10px] font-bold tracking-[0.3em] uppercase">Visual
-                                    Reconnaissance Unit</span>
+                                <div
+                                    class="bg-primary/20 text-primary px-2 py-0.5 rounded text-[8px] font-bold uppercase tracking-widest flex items-center gap-1">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full"></span> VISUAL INTELLIGENCE:
+                                    AVAILABLE FOR OPS
+                                </div>
                             </div>
-                            <h2 class="text-4xl lg:text-6xl font-black tracking-tight mb-4 uppercase">
-                                Tactical_Multimedia<br />Portfolio_01</h2>
+                            <h2
+                                class="text-4xl lg:text-6xl font-black tracking-tight mb-4 uppercase text-center md:text-left">
+                                TACTICAL <span class="text-primary">MULTIMEDIA</span><br />PORTFOLIO_01</h2>
                             <p class="text-slate-400 text-lg font-light leading-relaxed">High-fidelity visual
                                 intelligence across maritime operations, stealth insertions, and environmental
                                 documentation in hostile zones.</p>
                         </div>
                         <div class="flex flex-col gap-4 text-right">
                             <div class="text-[10px] font-mono text-primary/60 uppercase">
-                                Lat: -6.2088° S | Lon: 106.8456° E<br />
+                                Lat: 42.3601° N | Lon: 71.0589° W<br />
                                 Status: Operational_Active
                             </div>
                             <button
@@ -445,6 +455,22 @@
             </div>
         </footer>
     </div>
+    <script>
+        // Admin Dropdown Toggle Logic
+        const trigger = document.getElementById('admin-trigger');
+        const dropdown = document.getElementById('admin-dropdown');
+
+        if (trigger && dropdown) {
+            trigger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                dropdown.classList.toggle('hidden');
+            });
+
+            document.addEventListener('click', () => {
+                dropdown.classList.add('hidden');
+            });
+        }
+    </script>
 </body>
 
 </html>

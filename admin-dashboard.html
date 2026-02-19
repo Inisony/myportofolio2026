@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>COMMAND CENTER - CMS</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#73d411",
+                        "background-light": "#f7f8f6",
+                        "background-dark": "#0a0a0a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .terminal-grid {
+            background-image: linear-gradient(rgba(115, 212, 17, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(115, 212, 17, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .glow-hover:hover {
+            box-shadow: 0 0 15px rgba(115, 212, 17, 0.4);
+            border-color: #73d411;
+        }
+
+        /* Live clock */
+        #live-clock {
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+    <div class="flex h-screen overflow-hidden relative terminal-grid">
+        <!-- Sidebar Navigation -->
+        <aside class="w-72 bg-background-light dark:bg-[#121212] border-r border-primary/20 flex flex-col z-20">
+            <div class="p-6 border-b border-primary/20">
+                <h1 class="text-primary text-lg font-bold tracking-widest uppercase">Command Center</h1>
+                <p class="text-xs text-primary/60 font-mono mt-1 uppercase tracking-tighter">CMS // Mission Control</p>
+            </div>
+            <nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
+                <div
+                    class="flex items-center gap-3 px-4 py-3 rounded bg-primary/20 text-primary border border-primary/30">
+                    <span class="material-symbols-outlined">grid_view</span>
+                    <span class="text-sm font-bold tracking-widest uppercase">Dashboard</span>
+                </div>
+                <a class="flex items-center gap-3 px-4 py-3 rounded text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-all"
+                    href="gallery.html">
+                    <span class="material-symbols-outlined">photo_library</span>
+                    <span class="text-sm font-bold tracking-widest uppercase">Photo Gallery</span>
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 rounded text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-all"
+                    href="video.html">
+                    <span class="material-symbols-outlined">movie</span>
+                    <span class="text-sm font-bold tracking-widest uppercase">Video Archive</span>
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 rounded text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-all"
+                    href="#">
+                    <span class="material-symbols-outlined">description</span>
+                    <span class="text-sm font-bold tracking-widest uppercase">Field Logs</span>
+                </a>
+                <div class="pt-8 pb-2 px-4">
+                    <p class="text-[10px] text-slate-500 font-mono uppercase tracking-[0.2em]">System Operations</p>
+                </div>
+                <a class="flex items-center gap-3 px-4 py-3 rounded text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-all"
+                    href="#">
+                    <span class="material-symbols-outlined">terminal</span>
+                    <span class="text-sm font-bold tracking-widest uppercase">System Settings</span>
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 rounded text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-all"
+                    href="#">
+                    <span class="material-symbols-outlined">security</span>
+                    <span class="text-sm font-bold tracking-widest uppercase">Security Logs</span>
+                </a>
+                <div class="pt-4">
+                    <button onclick="logout()"
+                        class="w-full flex items-center gap-3 px-4 py-3 rounded text-red-500/70 hover:bg-red-900/20 hover:text-red-400 transition-all border border-red-900/30">
+                        <span class="material-symbols-outlined">logout</span>
+                        <span class="text-sm font-bold tracking-widest uppercase">Logout</span>
+                    </button>
+                </div>
+            </nav>
+            <div class="p-6 border-t border-primary/10 bg-primary/5">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+                    <span class="text-[10px] font-mono text-primary uppercase tracking-tighter">System Online // 99.9%
+                        Uptime</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <img alt="Profile" class="w-8 h-8 rounded border border-primary/40"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN2FzkHyKnOA4lE4qq5AmNtCFta2EeSX-4m_zFvtLbg04IieYy_W3STcEH2bv5C4rxRQf_QyyzgUoAB8yT_3KOSoWhw39hr7bgFtaUZhUMvgMK347YuOnjEffrd2C5U3RQyW-CwQxB5n2Fm3ZQ-gP3O6GwgoGw_5aBLy39oYAmPsQRfMSq-Z0c9i9-f_ojDIf095BLTNJ8kzcTcdnG21P9tcuFIzj6fYjY5fMQekxQ0bgCCQ3bgs8clTeSmYvhXGFCchjqryIuMb8" />
+                    <div>
+                        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Operator</p>
+                        <p class="text-xs font-bold text-primary">UNIT_742</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- Main Content Area -->
+        <main class="flex-1 flex flex-col overflow-hidden relative">
+            <!-- Header -->
+            <header
+                class="h-16 border-b border-primary/20 flex items-center justify-between px-8 bg-background-light/50 dark:bg-background-dark/50 backdrop-blur-sm z-10">
+                <div class="flex items-center gap-4">
+                    <span class="text-primary/40 material-symbols-outlined">shield</span>
+                    <h2 class="text-sm font-bold tracking-widest uppercase">DASHBOARD // OVERVIEW</h2>
+                </div>
+                <div class="flex items-center gap-6 font-mono text-[10px] tracking-tighter text-slate-500">
+                    <div class="flex flex-col items-end">
+                        <span class="text-primary uppercase">Live Clock</span>
+                        <span id="live-clock" class="dark:text-slate-300">--:--:--</span>
+                    </div>
+                    <div class="flex flex-col items-end border-l border-primary/20 pl-6">
+                        <span class="text-primary uppercase">Encrypted Connection</span>
+                        <span class="dark:text-slate-300 text-green-500">AES-256 ACTIVE</span>
+                    </div>
+                    <a href="index.html"
+                        class="flex items-center gap-2 px-3 py-2 rounded border border-primary/30 text-primary hover:bg-primary/10 transition-all">
+                        <span class="material-symbols-outlined text-sm">arrow_back</span>
+                        <span class="uppercase tracking-widest font-bold">Back to Site</span>
+                    </a>
+                </div>
+            </header>
+            <!-- Scrollable Content -->
+            <div class="flex-1 overflow-y-auto p-8 relative">
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-primary/5 border border-primary/20 p-5 rounded-lg">
+                        <p class="text-[10px] font-mono text-primary uppercase mb-1">Total Mission Assets</p>
+                        <div class="flex items-end justify-between">
+                            <h3 class="text-3xl font-bold dark:text-slate-100">1,284</h3>
+                            <span class="text-primary text-xs font-bold font-mono">+12.4%</span>
+                        </div>
+                        <div class="w-full bg-primary/10 h-1 mt-4 rounded-full overflow-hidden">
+                            <div class="bg-primary h-full w-[72%]"></div>
+                        </div>
+                    </div>
+                    <div class="bg-primary/5 border border-primary/20 p-5 rounded-lg">
+                        <p class="text-[10px] font-mono text-primary uppercase mb-1">System Health</p>
+                        <div class="flex items-end justify-between">
+                            <h3 class="text-3xl font-bold dark:text-slate-100">98.2<span
+                                    class="text-sm text-slate-500">%</span></h3>
+                            <span class="text-primary text-xs font-bold font-mono">STABLE</span>
+                        </div>
+                        <div class="w-full bg-primary/10 h-1 mt-4 rounded-full overflow-hidden">
+                            <div class="bg-primary h-full w-[98%]"></div>
+                        </div>
+                    </div>
+                    <div class="bg-primary/5 border border-primary/20 p-5 rounded-lg">
+                        <p class="text-[10px] font-mono text-primary uppercase mb-1">Last Sync Update</p>
+                        <div class="flex items-end justify-between">
+                            <h3 id="sync-time" class="text-2xl font-bold dark:text-slate-100">--:--:--</h3>
+                            <span class="text-slate-500 text-xs font-bold font-mono">UTC+9</span>
+                        </div>
+                        <div class="w-full bg-primary/10 h-1 mt-4 rounded-full overflow-hidden">
+                            <div class="bg-primary/40 h-full w-[45%] animate-pulse"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Visitor Statistics Section -->
+                <div class="mb-10">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                        <h2 class="text-xl font-bold tracking-tight uppercase flex items-center gap-3">
+                            <span class="w-1 h-6 bg-primary"></span>
+                            Visitor Statistics
+                        </h2>
+                        <div class="flex items-center gap-2 text-[10px] font-mono text-primary/60 uppercase">
+                            <span class="material-symbols-outlined text-xs">monitoring</span>
+                            Real-time tracking enabled
+                        </div>
+                    </div>
+                    <!-- Metric Cards -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        <div class="bg-primary/5 border border-primary/20 p-5 rounded-lg">
+                            <p class="text-[10px] font-mono text-primary uppercase mb-1">Total Visitors</p>
+                            <div class="flex items-end justify-between">
+                                <h3 class="text-3xl font-bold dark:text-slate-100">5,432</h3>
+                                <span class="text-primary text-xs font-bold font-mono">+8.2%</span>
+                            </div>
+                            <div class="w-full bg-primary/10 h-1 mt-4 rounded-full overflow-hidden">
+                                <div class="bg-primary h-full w-[65%]"></div>
+                            </div>
+                        </div>
+                        <div class="bg-primary/5 border border-primary/20 p-5 rounded-lg">
+                            <p class="text-[10px] font-mono text-primary uppercase mb-1">Unique Visits</p>
+                            <div class="flex items-end justify-between">
+                                <h3 class="text-3xl font-bold dark:text-slate-100">1,200</h3>
+                                <span class="text-primary text-xs font-bold font-mono">+15.4%</span>
+                            </div>
+                            <div class="w-full bg-primary/10 h-1 mt-4 rounded-full overflow-hidden">
+                                <div class="bg-primary h-full w-[40%]"></div>
+                            </div>
+                        </div>
+                        <div class="bg-primary/5 border border-primary/20 p-5 rounded-lg">
+                            <p class="text-[10px] font-mono text-primary uppercase mb-1">Avg. Session Duration</p>
+                            <div class="flex items-end justify-between">
+                                <h3 class="text-3xl font-bold dark:text-slate-100">04:25</h3>
+                                <span class="text-slate-500 text-xs font-bold font-mono">MIN:SEC</span>
+                            </div>
+                            <div class="w-full bg-primary/10 h-1 mt-4 rounded-full overflow-hidden">
+                                <div class="bg-primary/40 h-full w-[55%] animate-pulse"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Activity Chart -->
+                    <div class="bg-[#121212] border border-primary/20 rounded-lg p-6">
+                        <div class="flex items-center justify-between mb-6">
+                            <p class="text-xs font-bold text-primary uppercase tracking-widest">Visitor Activity - Last
+                                7 Days</p>
+                            <div class="flex gap-4 text-[10px] font-mono text-slate-500">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-2 h-2 bg-primary"></div> VISITORS
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <div class="w-2 h-2 bg-primary/20"></div> PREVIOUS
+                                </div>
+                            </div>
+                        </div>
+                        <div class="h-48 w-full flex items-end justify-between gap-2">
+                            <div class="flex-1 flex flex-col items-center gap-2">
+                                <div class="w-full bg-primary/20 h-[30%] rounded-t"></div>
+                                <div class="w-full bg-primary h-[45%] rounded-t -mt-10"></div>
+                                <span class="text-[8px] font-mono text-slate-500 uppercase">Mon</span>
+                            </div>
+                            <div class="flex-1 flex flex-col items-center gap-2">
+                                <div class="w-full bg-primary/20 h-[40%] rounded-t"></div>
+                                <div class="w-full bg-primary h-[60%] rounded-t -mt-12"></div>
+                                <span class="text-[8px] font-mono text-slate-500 uppercase">Tue</span>
+                            </div>
+                            <div class="flex-1 flex flex-col items-center gap-2">
+                                <div class="w-full bg-primary/20 h-[35%] rounded-t"></div>
+                                <div class="w-full bg-primary h-[55%] rounded-t -mt-11"></div>
+                                <span class="text-[8px] font-mono text-slate-500 uppercase">Wed</span>
+                            </div>
+                            <div class="flex-1 flex flex-col items-center gap-2">
+                                <div class="w-full bg-primary/20 h-[50%] rounded-t"></div>
+                                <div class="w-full bg-primary h-[85%] rounded-t -mt-16"></div>
+                                <span class="text-[8px] font-mono text-slate-500 uppercase">Thu</span>
+                            </div>
+                            <div class="flex-1 flex flex-col items-center gap-2">
+                                <div class="w-full bg-primary/20 h-[45%] rounded-t"></div>
+                                <div class="w-full bg-primary h-[70%] rounded-t -mt-14"></div>
+                                <span class="text-[8px] font-mono text-slate-500 uppercase">Fri</span>
+                            </div>
+                            <div class="flex-1 flex flex-col items-center gap-2">
+                                <div class="w-full bg-primary/20 h-[25%] rounded-t"></div>
+                                <div class="w-full bg-primary h-[40%] rounded-t -mt-8"></div>
+                                <span class="text-[8px] font-mono text-slate-500 uppercase">Sat</span>
+                            </div>
+                            <div class="flex-1 flex flex-col items-center gap-2">
+                                <div class="w-full bg-primary/20 h-[30%] rounded-t"></div>
+                                <div class="w-full bg-primary h-[50%] rounded-t -mt-10"></div>
+                                <span class="text-[8px] font-mono text-slate-500 uppercase">Sun</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Traffic Source Report Section -->
+                <div class="mb-10">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                        <h2 class="text-xl font-bold tracking-tight uppercase flex items-center gap-3">
+                            <span class="w-1 h-6 bg-primary"></span>
+                            Traffic Source Report
+                        </h2>
+                        <div class="flex items-center gap-2 text-[10px] font-mono text-primary/60 uppercase">
+                            <span class="material-symbols-outlined text-xs">analytics</span>
+                            Source Analysis Active
+                        </div>
+                    </div>
+                    <div class="bg-[#121212] border border-primary/20 rounded-lg p-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <!-- Instagram Source -->
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-end">
+                                    <div>
+                                        <p class="text-[10px] font-mono text-primary uppercase">Source: Instagram</p>
+                                        <h4 class="text-lg font-bold dark:text-slate-100 uppercase tracking-widest">
+                                            3,420 <span class="text-[10px] text-slate-500 font-normal">Hits</span></h4>
+                                    </div>
+                                    <span class="text-primary text-xs font-bold font-mono">63%</span>
+                                </div>
+                                <div
+                                    class="w-full bg-primary/10 h-2 rounded-full overflow-hidden border border-primary/20">
+                                    <div class="bg-primary h-full w-[63%] shadow-[0_0_10px_rgba(115,212,17,0.5)]"></div>
+                                </div>
+                                <div class="flex justify-between text-[8px] font-mono text-slate-500 uppercase">
+                                    <span>0%</span><span>Peak Traffic</span><span>100%</span>
+                                </div>
+                            </div>
+                            <!-- YouTube Source -->
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-end">
+                                    <div>
+                                        <p class="text-[10px] font-mono text-primary uppercase">Source: YouTube</p>
+                                        <h4 class="text-lg font-bold dark:text-slate-100 uppercase tracking-widest">
+                                            2,012 <span class="text-[10px] text-slate-500 font-normal">Hits</span></h4>
+                                    </div>
+                                    <span class="text-primary text-xs font-bold font-mono">37%</span>
+                                </div>
+                                <div
+                                    class="w-full bg-primary/10 h-2 rounded-full overflow-hidden border border-primary/20">
+                                    <div class="bg-primary h-full w-[37%] shadow-[0_0_10px_rgba(115,212,17,0.5)]"></div>
+                                </div>
+                                <div class="flex justify-between text-[8px] font-mono text-slate-500 uppercase">
+                                    <span>0%</span><span>Stable Feed</span><span>100%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Active Mission Assets Table -->
+                <div class="mb-10">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                        <h2 class="text-xl font-bold tracking-tight uppercase flex items-center gap-3">
+                            <span class="w-1 h-6 bg-primary"></span>
+                            Active Mission Assets
+                        </h2>
+                        <button
+                            class="bg-primary hover:bg-primary/90 text-background-dark px-6 py-3 rounded font-bold text-xs tracking-[0.2em] flex items-center gap-2 glow-hover transition-all">
+                            <span class="material-symbols-outlined text-sm">add_circle</span>
+                            ADD NEW MISSION ASSET
+                        </button>
+                    </div>
+                    <!-- Asset Table -->
+                    <div class="bg-[#121212] border border-primary/20 rounded-lg overflow-hidden">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="bg-primary/10 border-b border-primary/20">
+                                        <th
+                                            class="px-6 py-4 text-[10px] font-bold text-primary uppercase tracking-[0.2em]">
+                                            Asset Name</th>
+                                        <th
+                                            class="px-6 py-4 text-[10px] font-bold text-primary uppercase tracking-[0.2em]">
+                                            Type</th>
+                                        <th
+                                            class="px-6 py-4 text-[10px] font-bold text-primary uppercase tracking-[0.2em]">
+                                            Deployed Date</th>
+                                        <th
+                                            class="px-6 py-4 text-[10px] font-bold text-primary uppercase tracking-[0.2em]">
+                                            Status</th>
+                                        <th
+                                            class="px-6 py-4 text-[10px] font-bold text-primary uppercase tracking-[0.2em] text-right">
+                                            Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-primary/10">
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-5">
+                                            <div class="flex items-center gap-3">
+                                                <div
+                                                    class="w-8 h-8 rounded bg-primary/10 border border-primary/30 flex items-center justify-center">
+                                                    <span
+                                                        class="material-symbols-outlined text-primary text-sm">image</span>
+                                                </div><span
+                                                    class="text-sm font-bold dark:text-slate-200 uppercase tracking-wider">Alpha
+                                                    Strike Ops</span>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-5"><span
+                                                class="px-2 py-1 bg-primary/20 text-primary text-[10px] font-bold rounded border border-primary/30 uppercase">Photo</span>
+                                        </td>
+                                        <td class="px-6 py-5 font-mono text-xs dark:text-slate-400">2023-10-12</td>
+                                        <td class="px-6 py-5">
+                                            <div class="flex items-center gap-2">
+                                                <div class="w-1.5 h-1.5 rounded-full bg-primary"></div><span
+                                                    class="text-[10px] font-bold text-primary uppercase">Deployed</span>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-5 text-right">
+                                            <div class="flex items-center justify-end gap-2"><button
+                                                    class="px-3 py-1.5 border border-primary/20 rounded text-[10px] font-bold uppercase hover:bg-primary/10 hover:border-primary/60 transition-all">Edit</button><button
+                                                    class="px-3 py-1.5 border border-red-900/40 rounded text-[10px] font-bold uppercase text-red-500/70 hover:bg-red-900/20 hover:border-red-500 transition-all">Delete</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-5">
+                                            <div class="flex items-center gap-3">
+                                                <div
+                                                    class="w-8 h-8 rounded bg-primary/10 border border-primary/30 flex items-center justify-center">
+                                                    <span
+                                                        class="material-symbols-outlined text-primary text-sm">videocam</span>
+                                                </div><span
+                                                    class="text-sm font-bold dark:text-slate-200 uppercase tracking-wider">Night
+                                                    Vision Recon</span>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-5"><span
+                                                class="px-2 py-1 bg-primary/20 text-primary text-[10px] font-bold rounded border border-primary/30 uppercase">Video</span>
+                                        </td>
+                                        <td class="px-6 py-5 font-mono text-xs dark:text-slate-400">2023-11-05</td>
+                                        <td class="px-6 py-5">
+                                            <div class="flex items-center gap-2">
+                                                <div class="w-1.5 h-1.5 rounded-full bg-slate-500"></div><span
+                                                    class="text-[10px] font-bold text-slate-500 uppercase">Archived</span>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-5 text-right">
+                                            <div class="flex items-center justify-end gap-2"><button
+                                                    class="px-3 py-1.5 border border-primary/20 rounded text-[10px] font-bold uppercase hover:bg-primary/10 transition-all">Edit</button><button
+                                                    class="px-3 py-1.5 border border-red-900/40 rounded text-[10px] font-bold uppercase text-red-500/70 hover:bg-red-900/20 transition-all">Delete</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-5">
+                                            <div class="flex items-center gap-3">
+                                                <div
+                                                    class="w-8 h-8 rounded bg-primary/10 border border-primary/30 flex items-center justify-center">
+                                                    <span
+                                                        class="material-symbols-outlined text-primary text-sm">image</span>
+                                                </div><span
+                                                    class="text-sm font-bold dark:text-slate-200 uppercase tracking-wider">Urban
+                                                    Recon Pattern</span>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-5"><span
+                                                class="px-2 py-1 bg-primary/20 text-primary text-[10px] font-bold rounded border border-primary/30 uppercase">Photo</span>
+                                        </td>
+                                        <td class="px-6 py-5 font-mono text-xs dark:text-slate-400">2023-11-20</td>
+                                        <td class="px-6 py-5">
+                                            <div class="flex items-center gap-2">
+                                                <div class="w-1.5 h-1.5 rounded-full bg-primary"></div><span
+                                                    class="text-[10px] font-bold text-primary uppercase">Deployed</span>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-5 text-right">
+                                            <div class="flex items-center justify-end gap-2"><button
+                                                    class="px-3 py-1.5 border border-primary/20 rounded text-[10px] font-bold uppercase hover:bg-primary/10 transition-all">Edit</button><button
+                                                    class="px-3 py-1.5 border border-red-900/40 rounded text-[10px] font-bold uppercase text-red-500/70 hover:bg-red-900/20 transition-all">Delete</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-primary/5 transition-colors">
+                                        <td class="px-6 py-5">
+                                            <div class="flex items-center gap-3">
+                                                <div
+                                                    class="w-8 h-8 rounded bg-primary/10 border border-primary/30 flex items-center justify-center">
+                                                    <span
+                                                        class="material-symbols-outlined text-primary text-sm">assignment</span>
+                                                </div><span
+                                                    class="text-sm font-bold dark:text-slate-200 uppercase tracking-wider">Field
+                                                    Log #082</span>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-5"><span
+                                                class="px-2 py-1 bg-primary/20 text-primary text-[10px] font-bold rounded border border-primary/30 uppercase">Log</span>
+                                        </td>
+                                        <td class="px-6 py-5 font-mono text-xs dark:text-slate-400">2023-12-01</td>
+                                        <td class="px-6 py-5">
+                                            <div class="flex items-center gap-2">
+                                                <div class="w-1.5 h-1.5 rounded-full bg-orange-500"></div><span
+                                                    class="text-[10px] font-bold text-orange-500 uppercase">Drafting</span>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-5 text-right">
+                                            <div class="flex items-center justify-end gap-2"><button
+                                                    class="px-3 py-1.5 border border-primary/20 rounded text-[10px] font-bold uppercase hover:bg-primary/10 transition-all">Edit</button><button
+                                                    class="px-3 py-1.5 border border-red-900/40 rounded text-[10px] font-bold uppercase text-red-500/70 hover:bg-red-900/20 transition-all">Delete</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="bg-primary/5 p-4 flex items-center justify-between border-t border-primary/20">
+                            <span class="text-[10px] font-mono text-slate-500 uppercase">Showing 4 of 1,284
+                                Assets</span>
+                            <div class="flex gap-2">
+                                <button
+                                    class="w-8 h-8 border border-primary/20 rounded flex items-center justify-center text-primary/40 hover:text-primary hover:border-primary transition-all"><span
+                                        class="material-symbols-outlined text-sm">chevron_left</span></button>
+                                <button
+                                    class="w-8 h-8 border border-primary/40 bg-primary/10 rounded flex items-center justify-center text-primary text-xs font-bold">1</button>
+                                <button
+                                    class="w-8 h-8 border border-primary/20 rounded flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-all text-xs font-bold">2</button>
+                                <button
+                                    class="w-8 h-8 border border-primary/20 rounded flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-all text-xs font-bold">3</button>
+                                <button
+                                    class="w-8 h-8 border border-primary/20 rounded flex items-center justify-center text-primary/40 hover:text-primary hover:border-primary transition-all"><span
+                                        class="material-symbols-outlined text-sm">chevron_right</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- System Terminal Feed -->
+                    <div
+                        class="mt-8 bg-background-dark border border-primary/10 rounded p-4 font-mono text-[10px] leading-relaxed text-primary/40">
+                        <div class="flex items-center gap-2 text-primary/60 mb-2">
+                            <span class="material-symbols-outlined text-xs">terminal</span>
+                            <span class="uppercase tracking-widest">Live Activity Log</span>
+                        </div>
+                        <p>&gt; [09:12:44] Connection established via SECURE_PROXY_4</p>
+                        <p>&gt; [09:12:45] Authenticating UNIT_742... SUCCESS</p>
+                        <p>&gt; [09:14:12] Mission Asset "Alpha Strike Ops" metadata synchronized.</p>
+                        <p>&gt; [09:15:00] Running background integrity check... 100% CLEAN</p>
+                        <p class="animate-pulse" id="terminal-log">&gt; [--:--:--] Awaiting mission input_</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        // Live clock
+        function updateClock() {
+            const now = new Date();
+            const t = now.toLocaleTimeString('en-GB');
+            document.getElementById('live-clock').textContent = t;
+            document.getElementById('sync-time').textContent = t;
+            document.getElementById('terminal-log').textContent =
+                `> [${t}] Awaiting mission input_`;
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
+
+        function logout() {
+            window.location.href = 'admin-login.html';
+        }
+    </script>
+</body>
+
+</html>

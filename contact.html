@@ -68,28 +68,25 @@
     <div class="relative min-h-screen flex flex-col overflow-x-hidden tactical-grid">
         <!-- Top Navigation -->
         <header class="sticky top-0 z-50 w-full border-b border-border-dark bg-background-dark/80 backdrop-blur-md">
-            <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
                 <div class="flex items-center gap-3">
-                    <div class="text-primary">
-                        <span class="material-symbols-outlined text-3xl">deployed_code</span>
+                    <div class="text-primary"><span class="material-symbols-outlined text-3xl">track_changes</span>
                     </div>
-                    <h2 class="text-lg font-black tracking-tighter uppercase">Mission Control</h2>
+                    <h2 class="text-lg font-black tracking-tighter uppercase text-white">TM OPERATOR</h2>
                 </div>
                 <nav
                     class="hidden md:flex items-center gap-8 uppercase text-xs font-bold tracking-widest text-slate-400">
-                    <a class="hover:text-primary transition-colors" href="index.html">Home</a>
-                    <a class="hover:text-primary transition-colors" href="about.html">About</a>
-                    <a class="hover:text-primary transition-colors" href="gallery.html">Gallery</a>
-                    <a class="hover:text-primary transition-colors" href="video.html">Video</a>
-                    <a class="text-primary" href="contact.html">Contact</a>
+                    <a class="hover:text-primary transition-colors text-white" href="#">HOME</a><a
+                        class="hover:text-primary transition-colors text-white" href="#">PORTFOLIO</a><a
+                        class="hover:text-primary transition-colors text-white" href="#">SERVICES</a><a
+                        class="text-primary" href="#">CONTACT</a>
                 </nav>
-                <div class="flex items-center gap-4">
-                    <button
-                        class="p-2 rounded-lg bg-surface-dark border border-border-dark text-primary hover:bg-primary/10 transition-all">
-                        <span class="material-symbols-outlined">notifications</span>
-                    </button>
-                    <div class="size-10 rounded-full border-2 border-primary overflow-hidden">
-                        <img class="w-full h-full object-cover" data-alt="Profile portrait of a Marine professional"
+                <div class="flex items-center gap-4"><a
+                        class="bg-primary hover:bg-primary/90 text-background-dark text-[10px] font-black px-6 py-2 rounded uppercase tracking-widest transition-all"
+                        href="#">DEPLOY NOW</a>
+                    <div
+                        class="size-8 rounded-full border border-border-dark overflow-hidden bg-surface-dark flex items-center justify-center">
+                        <img alt="User Profile" class="w-full h-full object-cover"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAClhckHo5K6owHrg2i8ClxYO6kUQ7-TNJUWzXABj8dbKVju9NlGJ5Ce1qcHEsWlOWELQ-ChgI628spjgJH0VfzHtHdtWrwjJbBtHvtR9VqiU0hWhTTxKI3vQ2ZjdfTkNvITAZY7aag_ai4E5TntEeQdsY4ELa7rcm04NFwGNXuLv3F7yfQilArqrL-neUIG7Zm6ZVJ92rdHWQfmw54pdHAPXCfSKJqrOXAnIZE9_IF1FDRVK4nyN7v11VjBx7cxd1LJFBCuMcJ0ho" />
                     </div>
                 </div>
@@ -128,8 +125,7 @@
                             <span class="text-xs font-bold text-slate-300">DIRECT LINE ACTIVE</span>
                         </div>
                     </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <!-- Instagram -->
+                    <div class="grid grid-cols-2 gap-4"><!-- Instagram -->
                         <a class="flex items-center gap-3 p-3 rounded bg-background-dark border border-border-dark hover:border-primary group transition-all"
                             href="#">
                             <span
@@ -278,6 +274,22 @@
             </div>
         </footer>
     </div>
+    <script>
+        // Admin Dropdown Toggle Logic
+        const trigger = document.getElementById('admin-trigger');
+        const dropdown = document.getElementById('admin-dropdown');
+
+        if (trigger && dropdown) {
+            trigger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                dropdown.classList.toggle('hidden');
+            });
+
+            document.addEventListener('click', () => {
+                dropdown.classList.add('hidden');
+            });
+        }
+    </script>
 </body>
 
 </html>
