@@ -64,13 +64,13 @@
                 </div>
                 <nav class="hidden md:flex items-center gap-10">
                     <a class="text-sm font-semibold uppercase tracking-widest hover:text-primary transition-colors"
-                        href="#">Home</a>
+                        href="index.html">Home</a>
                     <a class="text-sm font-semibold uppercase tracking-widest hover:text-primary transition-colors"
-                        href="#portfolio">Portfolio</a>
+                        href="gallery.html">Portfolio</a>
                     <a class="text-sm font-semibold uppercase tracking-widest hover:text-primary transition-colors"
-                        href="#services">Services</a>
+                        href="index.html#services">Services</a>
                     <a class="text-sm font-semibold uppercase tracking-widest hover:text-primary transition-colors"
-                        href="#contact">Contact</a>
+                        href="contact.html">Contact</a>
                 </nav>
                 <div class="flex items-center gap-4">
                     <button
@@ -78,32 +78,11 @@
                         Deploy Now
                     </button>
                     <div class="relative group">
-                        <button id="admin-trigger"
-                            class="h-10 w-10 rounded-full border-2 border-primary/30 bg-cover bg-center overflow-hidden hover:border-primary transition-all"
+                        <a href="admin-login.html" id="admin-trigger"
+                            class="h-10 w-10 rounded-full border-2 border-primary/30 bg-cover bg-center overflow-hidden hover:border-primary transition-all block"
                             data-alt="Close up portrait of a professional media operator"
                             style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA0_YD53Hkja6HXVsjDaYmko7TY6fN9m0hzOFLePGd_s-SJGHa8bEoi2drO5obC-fQ9vMoz9dyhYIPxO00eFaLrcFzlaBCS99psiBMnlkL_mDwKS4mu0PIPGUhnERr3GA05RvmEsBIcDafmDjIfZwxJQVRb84ZDXkWC9GQ1rsLY_R-ImBQE4V8tNsP_pxhF8Hofrr9hGKlyX-mNGZOwLjsMvrofyTFZls5MS5KPwyW2XUIQIe-z0SQ4lSim2las-QSAgGcLIAIYmQ0')">
-                        </button>
-                        <!-- Dropdown Menu -->
-                        <div id="admin-dropdown"
-                            class="absolute right-0 mt-2 w-48 bg-background-dark/95 border border-primary/20 rounded-lg shadow-2xl backdrop-blur-md hidden z-50 overflow-hidden">
-                            <div class="px-4 py-3 border-b border-primary/10">
-                                <p class="text-[10px] font-bold text-primary uppercase tracking-widest">Operator Session
-                                </p>
-                                <p class="text-xs font-bold text-slate-300">Unit_Admin</p>
-                            </div>
-                            <div class="py-2">
-                                <a href="admin-login.html"
-                                    class="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 text-slate-400 hover:text-primary transition-all">
-                                    <span class="material-symbols-outlined text-sm">terminal</span>
-                                    <span class="text-[10px] font-bold uppercase tracking-widest">Command Access</span>
-                                </a>
-                                <a href="admin-dashboard.html"
-                                    class="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 text-slate-400 hover:text-primary transition-all">
-                                    <span class="material-symbols-outlined text-sm">dashboard</span>
-                                    <span class="text-[10px] font-bold uppercase tracking-widest">Dashboard</span>
-                                </a>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -377,22 +356,7 @@
             </div>
         </footer>
     </div>
-    <script>
-        // Admin Dropdown Toggle Logic
-        const trigger = document.getElementById('admin-trigger');
-        const dropdown = document.getElementById('admin-dropdown');
 
-        if (trigger && dropdown) {
-            trigger.addEventListener('click', (e) => {
-                e.stopPropagation();
-                dropdown.classList.toggle('hidden');
-            });
-
-            document.addEventListener('click', () => {
-                dropdown.classList.add('hidden');
-            });
-        }
-    </script>
 </body>
 
 </html>

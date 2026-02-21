@@ -62,43 +62,24 @@
                         </div>
                         <h1 class="text-lg font-black tracking-tighter uppercase leading-none">TM OPERATOR</h1>
                     </div>
-                    <nav class="hidden md:flex items-center gap-8 uppercase text-[10px] font-bold tracking-[0.2em]"><a
-                            class="text-slate-500 hover:text-primary transition-colors" href="#">HOME</a><a
-                            class="text-primary" href="#">PORTFOLIO</a><a
-                            class="text-slate-500 hover:text-primary transition-colors" href="#">SERVICES</a><a
-                            class="text-slate-500 hover:text-primary transition-colors" href="#">CONTACT</a></nav>
+                    <nav class="hidden md:flex items-center gap-8 uppercase text-[10px] font-bold tracking-[0.2em]">
+                        <a class="text-slate-500 hover:text-primary transition-colors" href="index.html">HOME</a>
+                        <a class="text-primary" href="gallery.html">PORTFOLIO</a>
+                        <a class="text-slate-500 hover:text-primary transition-colors"
+                            href="index.html#services">SERVICES</a>
+                        <a class="text-slate-500 hover:text-primary transition-colors" href="contact.html">CONTACT</a>
+                    </nav>
                 </div>
                 <div class="flex items-center gap-4"><button
                         class="bg-primary hover:bg-primary/90 text-background-dark px-5 py-2 rounded font-black uppercase text-[10px] tracking-widest transition-all">DEPLOY
                         NOW</button>
                     <div class="relative group">
-                        <button id="admin-trigger"
-                            class="h-8 w-8 rounded-full overflow-hidden border border-primary/40 hover:border-primary transition-all">
+                        <a href="admin-login.html" id="admin-trigger"
+                            class="h-8 w-8 rounded-full overflow-hidden border border-primary/40 hover:border-primary transition-all block">
                             <div class="w-full h-full bg-cover bg-center"
                                 style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDg4HVtlFNcOZPLwqu6_5SERd4nybRc8TUlJGPCrdDW3OXiHaN-Lm4uJtaqqW5HG11JnsdA8HErhCjXuWbLDFbh-ut7MpPzlD-HtJ4W_fiDYXMjZqS5LirRidJR1_Jb9aMpufTS6hDQnxR8N0NKnilK5X2tTv9CHt9HHbTfa4_RizH0k6ZR2nXmGNV0S-17Ax_1gxy1dRL8mn_kdmuQr3u8kwNiin-zT64URtjE16Z9rLQl-Bk9QMmGGy4Xba7dOxYEK3BfHHQx3to')">
                             </div>
-                        </button>
-                        <!-- Dropdown Menu -->
-                        <div id="admin-dropdown"
-                            class="absolute right-0 mt-2 w-48 bg-background-dark/95 border border-primary/20 rounded-lg shadow-2xl backdrop-blur-md hidden z-50 overflow-hidden">
-                            <div class="px-4 py-3 border-b border-primary/10">
-                                <p class="text-[10px] font-bold text-primary uppercase tracking-widest">Operator Session
-                                </p>
-                                <p class="text-xs font-bold text-slate-300">Unit_Admin</p>
-                            </div>
-                            <div class="py-2">
-                                <a href="admin-login.html"
-                                    class="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 text-slate-400 hover:text-primary transition-all">
-                                    <span class="material-symbols-outlined text-sm">terminal</span>
-                                    <span class="text-[10px] font-bold uppercase tracking-widest">Command Access</span>
-                                </a>
-                                <a href="admin-dashboard.html"
-                                    class="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 text-slate-400 hover:text-primary transition-all">
-                                    <span class="material-symbols-outlined text-sm">dashboard</span>
-                                    <span class="text-[10px] font-bold uppercase tracking-widest">Dashboard</span>
-                                </a>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -455,22 +436,7 @@
             </div>
         </footer>
     </div>
-    <script>
-        // Admin Dropdown Toggle Logic
-        const trigger = document.getElementById('admin-trigger');
-        const dropdown = document.getElementById('admin-dropdown');
 
-        if (trigger && dropdown) {
-            trigger.addEventListener('click', (e) => {
-                e.stopPropagation();
-                dropdown.classList.toggle('hidden');
-            });
-
-            document.addEventListener('click', () => {
-                dropdown.classList.add('hidden');
-            });
-        }
-    </script>
 </body>
 
 </html>
